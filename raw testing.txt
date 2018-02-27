@@ -1,0 +1,249 @@
+******************************
+Base code, no modifications
+******************************
+
+C:\Users\ben\Documents\Job Hunting\Propeller>curl -X POST -H "Content-Type: application/json" --data "{\"patientId\":\"100\",\"timestamp\":\"Tue Nov 01 2016 09:11:51 GMT-0500 (CDT)\",\"medication\":\"Albuterol\"}" http://localhost:3000/api/usages
+{"id":1120}
+C:\Users\ben\Documents\Job Hunting\Propeller>ab -k -c 9 -n 1000 -T "Content-Type: application/json" -p "sample.json" http://localhost:3000/api/usages
+This is ApacheBench, Version 2.3 <$Revision: 1807734 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient)
+Completed 100 requests
+Completed 200 requests
+Completed 300 requests
+Completed 400 requests
+Completed 500 requests
+Completed 600 requests
+Completed 700 requests
+Completed 800 requests
+Completed 900 requests
+Completed 1000 requests
+Finished 1000 requests
+
+
+Server Software:
+Server Hostname:        localhost
+Server Port:            3000
+
+Document Path:          /api/usages
+Document Length:        11 bytes
+
+Concurrency Level:      9
+Time taken for tests:   0.561 seconds
+Complete requests:      1000
+Failed requests:        0
+Keep-Alive requests:    1000
+Total transferred:      222000 bytes
+Total body sent:        281000
+HTML transferred:       11000 bytes
+Requests per second:    1783.69 [#/sec] (mean)
+Time per request:       5.046 [ms] (mean)
+Time per request:       0.561 [ms] (mean, across all concurrent requests)
+Transfer rate:          386.70 [Kbytes/sec] received
+                        489.47 kb/s sent
+                        876.17 kb/s total
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.1      0       1
+Processing:     1    5   1.9      5      11
+Waiting:        1    5   1.9      5      11
+Total:          1    5   1.9      5      11
+
+Percentage of the requests served within a certain time (ms)
+  50%      5
+  66%      5
+  75%      6
+  80%      7
+  90%      8
+  95%      9
+  98%      9
+  99%     10
+ 100%     11 (longest request)
+ 
+ C:\Users\ben\Documents\Job Hunting\Propeller>ab -k -c 9 -n 10000 -T "Content-Type: application/json" -p "sample.json" http://localhost:3000/api/usages
+This is ApacheBench, Version 2.3 <$Revision: 1807734 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient)
+Completed 1000 requests
+Completed 2000 requests
+Completed 3000 requests
+Completed 4000 requests
+Completed 5000 requests
+Completed 6000 requests
+Completed 7000 requests
+Completed 8000 requests
+Completed 9000 requests
+Completed 10000 requests
+Finished 10000 requests
+
+
+Server Software:
+Server Hostname:        localhost
+Server Port:            3000
+
+Document Path:          /api/usages
+Document Length:        12 bytes
+
+Concurrency Level:      9
+Time taken for tests:   3.300 seconds
+Complete requests:      10000
+Failed requests:        0
+Keep-Alive requests:    10000
+Total transferred:      2230000 bytes
+Total body sent:        2810000
+HTML transferred:       120000 bytes
+Requests per second:    3030.07 [#/sec] (mean)
+Time per request:       2.970 [ms] (mean)
+Time per request:       0.330 [ms] (mean, across all concurrent requests)
+Transfer rate:          659.87 [Kbytes/sec] received
+                        831.50 kb/s sent
+                        1491.36 kb/s total
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.0      0       1
+Processing:     1    3   1.0      3      14
+Waiting:        1    3   1.0      3      14
+Total:          1    3   1.0      3      15
+
+Percentage of the requests served within a certain time (ms)
+  50%      3
+  66%      3
+  75%      3
+  80%      4
+  90%      4
+  95%      5
+  98%      6
+  99%      6
+ 100%     15 (longest request)
+ 
+C:\Users\ben\Documents\Job Hunting\Propeller>ab -k -c 50 -n 100000 -T "Content-Type: application/json" -p "sample.json" http://localhost:3000/api/usages
+This is ApacheBench, Version 2.3 <$Revision: 1807734 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient)
+Completed 10000 requests
+Completed 20000 requests
+Completed 30000 requests
+Completed 40000 requests
+Completed 50000 requests
+Completed 60000 requests
+Completed 70000 requests
+Completed 80000 requests
+Completed 90000 requests
+Completed 100000 requests
+Finished 100000 requests
+
+
+Server Software:
+Server Hostname:        localhost
+Server Port:            3000
+
+Document Path:          /api/usages
+Document Length:        12 bytes
+
+Concurrency Level:      50
+Time taken for tests:   32.136 seconds
+Complete requests:      100000
+Failed requests:        52122
+   (Connect: 0, Receive: 0, Length: 52122, Exceptions: 0)
+Keep-Alive requests:    100000
+Total transferred:      22352122 bytes
+Total body sent:        28100000
+HTML transferred:       1252122 bytes
+Requests per second:    3111.74 [#/sec] (mean)
+Time per request:       16.068 [ms] (mean)
+Time per request:       0.321 [ms] (mean, across all concurrent requests)
+Transfer rate:          679.24 [Kbytes/sec] received
+                        853.91 kb/s sent
+                        1533.14 kb/s total
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.0      0       1
+Processing:     3   16   2.3     16      54
+Waiting:        3   16   2.3     16      54
+Total:          3   16   2.3     16      54
+
+Percentage of the requests served within a certain time (ms)
+  50%     16
+  66%     16
+  75%     17
+  80%     17
+  90%     18
+  95%     19
+  98%     21
+  99%     24
+ 100%     54 (longest request)
+
+ 
+******************************
+Remove console logging
+******************************
+
+
+
+C:\Users\ben\Documents\Job Hunting\Propeller>ab -k -l -c 50 -n 100000 -T "Content-Type: application/json" -p "sample.json" http://localhost:3000/api/usages
+This is ApacheBench, Version 2.3 <$Revision: 1807734 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient)
+Completed 10000 requests
+Completed 20000 requests
+Completed 30000 requests
+Completed 40000 requests
+Completed 50000 requests
+Completed 60000 requests
+Completed 70000 requests
+Completed 80000 requests
+Completed 90000 requests
+Completed 100000 requests
+Finished 100000 requests
+
+
+Server Software:
+Server Hostname:        localhost
+Server Port:            3000
+
+Document Path:          /api/usages
+Document Length:        Variable
+
+Concurrency Level:      50
+Time taken for tests:   11.072 seconds
+Complete requests:      100000
+Failed requests:        0
+Keep-Alive requests:    100000
+Total transferred:      22288802 bytes
+Total body sent:        28100000
+HTML transferred:       1188900 bytes
+Requests per second:    9031.93 [#/sec] (mean)
+Time per request:       5.536 [ms] (mean)
+Time per request:       0.111 [ms] (mean, across all concurrent requests)
+Transfer rate:          1965.93 [Kbytes/sec] received
+                        2478.49 kb/s sent
+                        4444.42 kb/s total
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.0      0       1
+Processing:     2    6   1.9      5      53
+Waiting:        2    6   1.9      5      53
+Total:          2    6   1.9      5      53
+
+Percentage of the requests served within a certain time (ms)
+  50%      5
+  66%      5
+  75%      6
+  80%      6
+  90%      7
+  95%      9
+  98%     10
+  99%     12
+ 100%     53 (longest request)

@@ -1,0 +1,18 @@
+To get to 1 million POSTs per minute, we need 16,666 POSTs per second
+
+Testing using Apache Bench. Saw some dropped requests in early testing using a concurrency level of 10, so tried dropping it to 9. Larger tests showed that to be unneeded; -c 50 didn't drop anything at 100k requests. Further review of the documentation suggests using -l (to ignore different length results instead of logging them as errors) should be added.
+
+Testing of the base code shows about 3k requests per second.
+
+Used built-in profiler to see where the code is spending time:
+
+   ticks parent  name
+  10833   56.8%  C:\WINDOWS\SYSTEM32\ntdll.dll
+   5230   48.3%    LazyCompile: *Socket._writeGeneric net.js:708:42
+   3628   69.4%      LazyCompile: *doWrite _stream_writable.js:379:17
+   3628  100.0%        LazyCompile: *logRequest C:\Users\ben\Documents\GitHub\busyapi\node_modules\morgan\index.js:116:24
+   3628  100.0%          LazyCompile: *listener C:\Users\ben\Documents\GitHub\busyapi\node_modules\on-finished\index.js:161:20
+   3628  100.0%            LazyCompile: *onFinish 
+
+Modified to remove console logging, including morgan. This tripled (!) the number of requests we can handle to about 9k/second.
+

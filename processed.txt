@@ -1,0 +1,972 @@
+Statistical profiling result from isolate-000002085CFFA3A0-v8.log, (19061 ticks, 297 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+  10833   56.8%          C:\WINDOWS\SYSTEM32\ntdll.dll
+   4014   21.1%          C:\Program Files\nodejs\node.exe
+     64    0.3%          C:\WINDOWS\System32\KERNEL32.DLL
+     57    0.3%          C:\WINDOWS\System32\KERNELBASE.dll
+     42    0.2%          C:\WINDOWS\System32\WS2_32.dll
+     20    0.1%          C:\WINDOWS\system32\mswsock.dll
+      1    0.0%          C:\WINDOWS\System32\RPCRT4.dll
+      1    0.0%          C:\WINDOWS\SYSTEM32\WINMM.dll
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+    237    1.2%    5.9%  LoadIC: A load IC from the snapshot
+    196    1.0%    4.9%  Builtin: KeyedLoadIC_Megamorphic
+    137    0.7%    3.4%  StoreIC: A store IC from the snapshot
+    127    0.7%    3.2%  Builtin: FastNewClosure
+    106    0.6%    2.6%  LazyCompile: *next C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:178:16
+     94    0.5%    2.3%  Builtin: InterpreterEntryTrampoline
+     76    0.4%    1.9%  Builtin: StringEqual
+     72    0.4%    1.8%  Builtin: CallFunction_ReceiverIsAny
+     68    0.4%    1.7%  Builtin: KeyedStoreIC_Megamorphic_Strict
+     62    0.3%    1.5%  LazyCompile: *Socket._writeGeneric net.js:708:42
+     55    0.3%    1.4%  KeyedLoadIC: A keyed load IC from the snapshot
+     50    0.3%    1.2%  Function: ~byteLength buffer.js:475:20
+     46    0.2%    1.1%  Builtin: ArgumentsAdaptorTrampoline
+     42    0.2%    1.0%  Function: ~parse C:\Users\ben\Documents\GitHub\busyapi\node_modules\media-typer\index.js:139:15
+     40    0.2%    1.0%  Builtin: RegExpPrototypeTest
+     39    0.2%    1.0%  Stub: StringAddStub
+     38    0.2%    0.9%  LazyCompile: *Readable.read _stream_readable.js:365:35
+     36    0.2%    0.9%  Builtin: RegExpPrototypeExec
+     36    0.2%    0.9%  Builtin: CompileLazy
+     34    0.2%    0.8%  LazyCompile: *parserOnHeadersComplete _http_common.js:62:33
+     33    0.2%    0.8%  Function: ~Buffer.write buffer.js:855:34
+     32    0.2%    0.8%  LazyCompile: *logger C:\Users\ben\Documents\GitHub\busyapi\node_modules\morgan\index.js:103:25
+     32    0.2%    0.8%  LazyCompile: *end _http_outgoing.js:726:45
+     32    0.2%    0.8%  LazyCompile: *emit events.js:156:44
+     29    0.2%    0.7%  Builtin: Call_ReceiverIsNullOrUndefined
+     28    0.1%    0.7%  LazyCompile: *send C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\response.js:100:25
+     28    0.1%    0.7%  LazyCompile: *_storeHeader _http_outgoing.js:290:22
+     28    0.1%    0.7%  Function: ~removeAllListeners events.js:410:32
+     27    0.1%    0.7%  LazyCompile: *handle C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:135:31
+     27    0.1%    0.7%  LazyCompile: *_tickCallback internal/process/next_tick.js:151:25
+     27    0.1%    0.7%  Builtin: StringToLowerCaseIntl
+     27    0.1%    0.7%  Builtin: StringCharCodeAt
+     26    0.1%    0.6%  LazyCompile: *resOnFinish _http_server.js:509:21
+     26    0.1%    0.6%  LazyCompile: *parserOnIncoming _http_server.js:545:26
+     26    0.1%    0.6%  LazyCompile: *expressInit C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\middleware\init.js:22:30
+     26    0.1%    0.6%  Builtin: FastNewObject
+     26    0.1%    0.6%  Builtin: CallBoundFunction
+     25    0.1%    0.6%  LazyCompile: *header C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\response.js:707:29
+     25    0.1%    0.6%  LazyCompile: *<anonymous> C:\Users\ben\Documents\GitHub\busyapi\routes\api\usages.js:2:37
+     25    0.1%    0.6%  Function: ~serveStatic C:\Users\ben\Documents\GitHub\busyapi\node_modules\serve-static\index.js:72:31
+     25    0.1%    0.6%  Builtin: JSConstructStubGenericUnrestrictedReturn
+     23    0.1%    0.6%  LazyCompile: *Socket.setTimeout net.js:378:39
+     22    0.1%    0.5%  RegExp: ^ *([A-Za-z0-9][A-Za-z0-9!#$&^_-]{0\,126})\\/([A-Za-z0-9][A-Za-z0-9!#$&^_.+-]{0\,126}) *$
+     21    0.1%    0.5%  LazyCompile: *clearBuffer _stream_writable.js:469:21
+     21    0.1%    0.5%  LazyCompile: *cleanup C:\Users\ben\Documents\GitHub\busyapi\node_modules\ee-first\index.js:58:19
+     21    0.1%    0.5%  LazyCompile: *_send _http_outgoing.js:216:49
+     21    0.1%    0.5%  Function: ~b native typedarray.js:990:48
+     21    0.1%    0.5%  Builtin: Call_ReceiverIsAny
+     20    0.1%    0.5%  Stub: JSEntryStub
+     20    0.1%    0.5%  Function: ~emitTwo events.js:124:17
+     19    0.1%    0.5%  LazyCompile: *onwrite _stream_writable.js:422:17
+     19    0.1%    0.5%  Function: ~splitType C:\Users\ben\Documents\GitHub\busyapi\node_modules\media-typer\index.js:245:19
+     19    0.1%    0.5%  Builtin: CallFunction_ReceiverIsNullOrUndefined
+     18    0.1%    0.4%  LazyCompile: *onParserExecute _http_server.js:447:25
+     17    0.1%    0.4%  Stub: CEntryStub {1}
+     17    0.1%    0.4%  LazyCompile: *setCharset C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\utils.js:262:41
+     17    0.1%    0.4%  LazyCompile: *afterWrite net.js:855:20
+     17    0.1%    0.4%  LazyCompile: *ReadableState _stream_readable.js:58:23
+     17    0.1%    0.4%  Builtin: NewUnmappedArgumentsElements
+     16    0.1%    0.4%  RegExp: ^[!#$%&'*+.^_`|~0-9A-Za-z-]+\\/[!#$%&'*+.^_`|~0-9A-Za-z-]+$
+     16    0.1%    0.4%  LazyCompile: *parserOnMessageComplete _http_common.js:146:33
+     16    0.1%    0.4%  LazyCompile: *onSocket C:\Users\ben\Documents\GitHub\busyapi\node_modules\on-finished\index.js:106:20
+     16    0.1%    0.4%  LazyCompile: *_flushOutput _http_outgoing.js:834:63
+     16    0.1%    0.4%  LazyCompile: *ServerResponse _http_server.js:109:24
+     15    0.1%    0.4%  LoadIC: A load IC from the snapshot {1}
+     15    0.1%    0.4%  LazyCompile: *socketOnWrap _http_server.js:650:22
+     15    0.1%    0.4%  LazyCompile: *matchKnownFields _http_incoming.js:150:26
+     15    0.1%    0.4%  Function: ~validChunk _stream_writable.js:245:20
+     14    0.1%    0.3%  Stub: StringAddStub {1}
+     14    0.1%    0.3%  Stub: CEntryStub
+     14    0.1%    0.3%  Stub: ArraySingleArgumentConstructorStub
+     14    0.1%    0.3%  StoreIC: A store IC from the snapshot {1}
+     14    0.1%    0.3%  LazyCompile: *wetag C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\utils.js:52:31
+     14    0.1%    0.3%  LazyCompile: *parserOnBody _http_common.js:127:22
+     14    0.1%    0.3%  LazyCompile: *logRequest C:\Users\ben\Documents\GitHub\busyapi\node_modules\morgan\index.js:116:24
+     14    0.1%    0.3%  LazyCompile: *jsonParser C:\Users\ben\Documents\GitHub\busyapi\node_modules\body-parser\lib\types\json.js:91:30
+     14    0.1%    0.3%  LazyCompile: *checkInvalidHeaderChar _http_common.js:331:32
+     14    0.1%    0.3%  KeyedStoreIC: A keyed store IC from the snapshot
+     14    0.1%    0.3%  Builtin: ClassOf
+     13    0.1%    0.3%  LazyCompile: *writeHead C:\Users\ben\Documents\GitHub\busyapi\node_modules\on-headers\index.js:39:28
+     12    0.1%    0.3%  Stub: CallApiCallbackStub
+     12    0.1%    0.3%  RegExp: ^(?:Connection|Transfer-Encoding|Content-Length|Date|Expect|Trailer|Upgrade)$
+     12    0.1%    0.3%  LazyCompile: *insert timers.js:158:16
+     12    0.1%    0.3%  KeyedLoadIC: A keyed load IC from the snapshot {1}
+     12    0.1%    0.3%  Builtin: Call_ReceiverIsNotNullOrUndefined
+     11    0.1%    0.3%  Stub: CallICStub
+     11    0.1%    0.3%  RegExp: ^[!#$%&'*+.^_`|~0-9A-Za-z-]+$
+     11    0.1%    0.3%  Function: ~onEofChunk _stream_readable.js:480:20
+     11    0.1%    0.3%  Builtin: ToString
+     11    0.1%    0.3%  Builtin: StringIndexOf
+     10    0.1%    0.2%  LazyCompile: *trim_prefix C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:284:23
+     10    0.1%    0.2%  LazyCompile: *resume _stream_readable.js:812:16
+     10    0.1%    0.2%  LazyCompile: *app C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\express.js:37:21
+     10    0.1%    0.2%  Builtin: StringConstructor
+     10    0.1%    0.2%  Builtin: StrictEqual
+      9    0.0%    0.2%  Stub: RecordWriteStub {2}
+      9    0.0%    0.2%  Stub: CallApiGetterStub
+      9    0.0%    0.2%  LazyCompile: *exports.unenroll timers.js:373:45
+      9    0.0%    0.2%  LazyCompile: *emitNone events.js:104:18
+      9    0.0%    0.2%  LazyCompile: *checkIsHttpToken _http_common.js:281:26
+      9    0.0%    0.2%  LazyCompile: *Socket._getpeername net.js:637:41
+      9    0.0%    0.2%  LazyCompile: *<anonymous> :1:10
+      9    0.0%    0.2%  Builtin: StringCharAt
+      9    0.0%    0.2%  Builtin: RegExpReplace
+      9    0.0%    0.2%  Builtin: LoadICProtoArray
+      9    0.0%    0.2%  Builtin: JSEntryTrampoline
+      9    0.0%    0.2%  Builtin: GlobalIsNaN
+      9    0.0%    0.2%  Builtin: FastCloneRegExp
+      8    0.0%    0.2%  LazyCompile: *writeHead _http_server.js:185:19
+      8    0.0%    0.2%  LazyCompile: *query C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\middleware\query.js:38:24
+      8    0.0%    0.2%  LazyCompile: *pushValueToArray bootstrap_node.js:245:30
+      8    0.0%    0.2%  LazyCompile: *fastparse C:\Users\ben\Documents\GitHub\busyapi\node_modules\parseurl\index.js:95:20
+      8    0.0%    0.2%  LazyCompile: *cookieParser C:\Users\ben\Documents\GitHub\busyapi\node_modules\cookie-parser\index.js:40:31
+      8    0.0%    0.2%  LazyCompile: *append internal/linkedlist.js:29:16
+      8    0.0%    0.2%  LazyCompile: *app.(anonymous function) C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\application.js:472:25
+      8    0.0%    0.2%  Function: ~ok assert.js:69:12
+      8    0.0%    0.2%  Function: ~next C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\route.js:114:16
+      7    0.0%    0.2%  RegExp: [\\r\\n]
+      7    0.0%    0.2%  RegExp: ;\\s*charset\\s*=
+      7    0.0%    0.2%  LazyCompile: *module.exports C:\Users\ben\Documents\GitHub\busyapi\node_modules\qs\lib\parse.js:132:27
+      7    0.0%    0.2%  Builtin: TypedArrayInitializeWithBuffer
+      7    0.0%    0.2%  Builtin: StringPrototypeReplace
+      7    0.0%    0.2%  Builtin: GrowFastSmiOrObjectElements
+      7    0.0%    0.2%  Builtin: CallFunction_ReceiverIsNotNullOrUndefined
+      6    0.0%    0.1%  Stub: CallApiCallbackStub {1}
+      6    0.0%    0.1%  RegExp: =+$
+      6    0.0%    0.1%  LazyCompile: *urlencodedParser C:\Users\ben\Documents\GitHub\busyapi\node_modules\body-parser\lib\types\urlencoded.js:79:36
+      6    0.0%    0.1%  LazyCompile: *setWriteHeadHeaders C:\Users\ben\Documents\GitHub\busyapi\node_modules\on-headers\index.js:59:29
+      6    0.0%    0.1%  LazyCompile: *internalNextTick internal/process/next_tick.js:275:28
+      6    0.0%    0.1%  LazyCompile: *getStderr internal/process/stdio.js:27:21
+      6    0.0%    0.1%  LazyCompile: *_addListener events.js:233:22
+      6    0.0%    0.1%  LazyCompile: *Readable.on _stream_readable.js:771:33
+      6    0.0%    0.1%  LazyCompile: *Buffer buffer.js:147:16
+      6    0.0%    0.1%  LazyCompile: *<anonymous> C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:612:18
+      6    0.0%    0.1%  Function: ~Socket._getpeername net.js:637:41
+      6    0.0%    0.1%  Builtin: StringPrototypeSlice
+      6    0.0%    0.1%  Builtin: InterpreterPushArgsThenCallFunction
+      6    0.0%    0.1%  Builtin: FastNewFunctionContextFunction
+      6    0.0%    0.1%  Builtin: Divide
+      5    0.0%    0.1%  Stub: StringAddStub {2}
+      5    0.0%    0.1%  RegExp: (?:^|\\W)chunked(?:$|\\W)
+      5    0.0%    0.1%  LazyCompile: *stringify C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\response.js:1059:19
+      5    0.0%    0.1%  LazyCompile: *onCorkedFinish _stream_writable.js:623:24
+      5    0.0%    0.1%  LazyCompile: *next C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\route.js:114:16
+      5    0.0%    0.1%  LazyCompile: *getip C:\Users\ben\Documents\GitHub\busyapi\node_modules\morgan\index.js:457:15
+      5    0.0%    0.1%  LazyCompile: *exports.enroll timers.js:396:26
+      5    0.0%    0.1%  LazyCompile: *InnerArraySort native array.js:530:24
+      5    0.0%    0.1%  Builtin: NonNumberToNumber
+      5    0.0%    0.1%  Builtin: MathMin
+      5    0.0%    0.1%  Builtin: HasProperty
+      5    0.0%    0.1%  Builtin: ErrorConstructor
+      5    0.0%    0.1%  Builtin: CallWithArrayLike
+      4    0.0%    0.1%  Stub: CallApiCallbackStub {3}
+      4    0.0%    0.1%  RegExp: ^text\\/
+      4    0.0%    0.1%  LazyCompile: *resume_ _stream_readable.js:819:17
+      4    0.0%    0.1%  LazyCompile: *onHeaders C:\Users\ben\Documents\GitHub\busyapi\node_modules\on-headers\index.js:23:36
+      4    0.0%    0.1%  LazyCompile: *onFinish C:\Users\ben\Documents\GitHub\busyapi\node_modules\on-finished\index.js:95:20
+      4    0.0%    0.1%  LazyCompile: *afterWrite _stream_writable.js:450:20
+      4    0.0%    0.1%  Handler: An IC handler from the snapshot
+      4    0.0%    0.1%  Function: ~wetag C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\utils.js:52:31
+      4    0.0%    0.1%  Function: ~setWriteHeadHeaders C:\Users\ben\Documents\GitHub\busyapi\node_modules\on-headers\index.js:59:29
+      4    0.0%    0.1%  Function: ~resume_ _stream_readable.js:819:17
+      4    0.0%    0.1%  Function: ~onevent C:\Users\ben\Documents\GitHub\busyapi\node_modules\ee-first\index.js:81:26
+      4    0.0%    0.1%  Function: ~app.(anonymous function) C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\application.js:472:25
+      4    0.0%    0.1%  Builtin: TypedArrayConstructByArrayBuffer
+      4    0.0%    0.1%  Builtin: StringPrototypeIndexOf
+      4    0.0%    0.1%  Builtin: InterpreterPushArgsThenConstructFunction
+      4    0.0%    0.1%  Builtin: HandleApiCall
+      4    0.0%    0.1%  Builtin: GreaterThan
+      4    0.0%    0.1%  Builtin: ForInPrepare
+      3    0.0%    0.1%  Stub: RecordWriteStub {7}
+      3    0.0%    0.1%  Stub: RecordWriteStub {5}
+      3    0.0%    0.1%  Stub: RecordWriteStub {4}
+      3    0.0%    0.1%  Stub: ArraySingleArgumentConstructorStub {1}
+      3    0.0%    0.1%  LazyCompile: *recordStartTime C:\Users\ben\Documents\GitHub\busyapi\node_modules\morgan\index.js:484:25
+      3    0.0%    0.1%  LazyCompile: *dispatch C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\route.js:98:45
+      3    0.0%    0.1%  LazyCompile: *callback C:\Users\ben\Documents\GitHub\busyapi\node_modules\ee-first\index.js:53:20
+      3    0.0%    0.1%  LazyCompile: *addChunk _stream_readable.js:261:18
+      3    0.0%    0.1%  LazyCompile: *<anonymous> C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:271:64
+      3    0.0%    0.1%  Function: ~writeOrBuffer _stream_writable.js:339:23
+      3    0.0%    0.1%  Function: ~resolve path.js:193:28
+      3    0.0%    0.1%  Function: ~parse C:\Users\ben\Documents\GitHub\busyapi\node_modules\content-type\index.js:106:16
+      3    0.0%    0.1%  Function: ~onCorkedFinish _stream_writable.js:623:24
+      3    0.0%    0.1%  Function: ~isBuffer buffer.js:398:36
+      3    0.0%    0.1%  Function: ~format C:\Users\ben\Documents\GitHub\busyapi\node_modules\content-type\index.js:65:17
+      3    0.0%    0.1%  Function: ~first C:\Users\ben\Documents\GitHub\busyapi\node_modules\ee-first\index.js:24:15
+      3    0.0%    0.1%  Function: ~finalhandler C:\Users\ben\Documents\GitHub\busyapi\node_modules\finalhandler\index.js:51:23
+      3    0.0%    0.1%  Function: ~end _http_outgoing.js:726:45
+      3    0.0%    0.1%  Function: ~developmentFormatLine C:\Users\ben\Documents\GitHub\busyapi\node_modules\morgan\index.js:183:52
+      3    0.0%    0.1%  Function: ~append internal/linkedlist.js:29:16
+      3    0.0%    0.1%  Function: ~addChunk _stream_readable.js:261:18
+      3    0.0%    0.1%  Function: ~<anonymous> C:\Users\ben\Documents\GitHub\busyapi\routes\api\usages.js:2:37
+      3    0.0%    0.1%  Builtin: TypedArrayPrototypeLength
+      3    0.0%    0.1%  Builtin: StringPrototypeToLowerCaseIntl
+      3    0.0%    0.1%  Builtin: StringPrototypeSplit
+      3    0.0%    0.1%  Builtin: JSConstructStubApi
+      3    0.0%    0.1%  Builtin: FunctionPrototypeCall
+      3    0.0%    0.1%  Builtin: DeleteProperty
+      2    0.0%    0.0%  Stub: RecordWriteStub {9}
+      2    0.0%    0.0%  Stub: RecordWriteStub {8}
+      2    0.0%    0.0%  Stub: RecordWriteStub {3}
+      2    0.0%    0.0%  Stub: RecordWriteStub {1}
+      2    0.0%    0.0%  Stub: RecordWriteStub {10}
+      2    0.0%    0.0%  RegExp: ^\\/api\\/usages\\/?$
+      2    0.0%    0.0%  RegExp: ^\\/?$
+      2    0.0%    0.0%  LazyCompile: *updateOutgoingData _http_server.js:368:28
+      2    0.0%    0.0%  LazyCompile: *router C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:45:18
+      2    0.0%    0.0%  LazyCompile: *resetSocketTimeout _http_server.js:607:28
+      2    0.0%    0.0%  LazyCompile: *push internal/process/next_tick.js:20:7
+      2    0.0%    0.0%  LazyCompile: *listener C:\Users\ben\Documents\GitHub\busyapi\node_modules\on-finished\index.js:161:20
+      2    0.0%    0.0%  LazyCompile: *etag C:\Users\ben\Documents\GitHub\busyapi\node_modules\etag\index.js:71:14
+      2    0.0%    0.0%  LazyCompile: *emitReadable _stream_readable.js:498:22
+      2    0.0%    0.0%  LazyCompile: *_handles_method C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\route.js:58:59
+      2    0.0%    0.0%  LazyCompile: *Writable.cork _stream_writable.js:296:35
+      2    0.0%    0.0%  LazyCompile: *TickObject internal/process/next_tick.js:234:16
+      2    0.0%    0.0%  LazyCompile: *<anonymous> C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\request.js:448:36
+      2    0.0%    0.0%  Function: ~writeHead C:\Users\ben\Documents\GitHub\busyapi\node_modules\on-headers\index.js:39:28
+      2    0.0%    0.0%  Function: ~typeofrequest C:\Users\ben\Documents\GitHub\busyapi\node_modules\type-is\index.js:123:24
+      2    0.0%    0.0%  Function: ~setHeader _http_outgoing.js:500:57
+      2    0.0%    0.0%  Function: ~readableAddChunk _stream_readable.js:216:26
+      2    0.0%    0.0%  Function: ~parserOnIncoming _http_server.js:545:26
+      2    0.0%    0.0%  Function: ~normalizeType C:\Users\ben\Documents\GitHub\busyapi\node_modules\type-is\index.js:237:24
+      2    0.0%    0.0%  Function: ~logger C:\Users\ben\Documents\GitHub\busyapi\node_modules\morgan\index.js:103:25
+      2    0.0%    0.0%  Function: ~logRequest C:\Users\ben\Documents\GitHub\busyapi\node_modules\morgan\index.js:116:24
+      2    0.0%    0.0%  Function: ~listener C:\Users\ben\Documents\GitHub\busyapi\node_modules\on-finished\index.js:161:20
+      2    0.0%    0.0%  Function: ~isFinished C:\Users\ben\Documents\GitHub\busyapi\node_modules\on-finished\index.js:65:20
+      2    0.0%    0.0%  Function: ~insert timers.js:158:16
+      2    0.0%    0.0%  Function: ~handle C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\layer.js:86:49
+      2    0.0%    0.0%  Function: ~handle C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\application.js:157:29
+      2    0.0%    0.0%  Function: ~forwarded C:\Users\ben\Documents\GitHub\busyapi\node_modules\forwarded\index.js:24:20
+      2    0.0%    0.0%  Function: ~fastparse C:\Users\ben\Documents\GitHub\busyapi\node_modules\parseurl\index.js:95:20
+      2    0.0%    0.0%  Function: ~expressInit C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\middleware\init.js:22:30
+      2    0.0%    0.0%  Function: ~exports.unenroll timers.js:373:45
+      2    0.0%    0.0%  Function: ~escapeHeaderValue _http_outgoing.js:689:27
+      2    0.0%    0.0%  Function: ~emitNone events.js:104:18
+      2    0.0%    0.0%  Function: ~doWrite _stream_writable.js:379:17
+      2    0.0%    0.0%  Function: ~cleanup C:\Users\ben\Documents\GitHub\busyapi\node_modules\ee-first\index.js:58:19
+      2    0.0%    0.0%  Function: ~_writeRaw _http_outgoing.js:245:19
+      2    0.0%    0.0%  Function: ~_addListener events.js:233:22
+      2    0.0%    0.0%  Function: ~Writable.write _stream_writable.js:264:36
+      2    0.0%    0.0%  Function: ~Readable.read _stream_readable.js:365:35
+      2    0.0%    0.0%  Function: ~Readable.push _stream_readable.js:191:35
+      2    0.0%    0.0%  Builtin: ToBoolean
+      2    0.0%    0.0%  Builtin: NumberParseInt
+      2    0.0%    0.0%  Builtin: GlobalIsFinite
+      2    0.0%    0.0%  Builtin: Add {1}
+      1    0.0%    0.0%  Stub: RecordWriteStub {6}
+      1    0.0%    0.0%  Stub: RecordWriteStub {14}
+      1    0.0%    0.0%  Stub: RecordWriteStub {13}
+      1    0.0%    0.0%  Stub: RecordWriteStub {12}
+      1    0.0%    0.0%  Stub: RecordWriteStub {11}
+      1    0.0%    0.0%  Stub: RecordWriteStub
+      1    0.0%    0.0%  Stub: GetPropertyStub
+      1    0.0%    0.0%  Stub: CallApiCallbackStub {2}
+      1    0.0%    0.0%  RegExp: ^\\/users\\/?(?=\\/|$)
+      1    0.0%    0.0%  LazyCompile: *setHeader _http_outgoing.js:500:57
+      1    0.0%    0.0%  LazyCompile: *set C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\application.js:351:23
+      1    0.0%    0.0%  LazyCompile: *remove internal/linkedlist.js:15:16
+      1    0.0%    0.0%  LazyCompile: *onevent C:\Users\ben\Documents\GitHub\busyapi\node_modules\ee-first\index.js:81:26
+      1    0.0%    0.0%  LazyCompile: *ip C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\request.js:339:36
+      1    0.0%    0.0%  LazyCompile: *handle C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\layer.js:86:49
+      1    0.0%    0.0%  LazyCompile: *get _stream_duplex.js:81:6
+      1    0.0%    0.0%  LazyCompile: *first C:\Users\ben\Documents\GitHub\busyapi\node_modules\ee-first\index.js:24:15
+      1    0.0%    0.0%  LazyCompile: *doWrite _stream_writable.js:379:17
+      1    0.0%    0.0%  LazyCompile: *debugs.(anonymous function) util.js:276:29
+      1    0.0%    0.0%  LazyCompile: *adjustOffset buffer.js:950:22
+      1    0.0%    0.0%  LazyCompile: *Writable.write _stream_writable.js:264:36
+      1    0.0%    0.0%  LazyCompile: *Uint8Array native typedarray.js:158:31
+      1    0.0%    0.0%  Handler: An IC handler from the snapshot {1}
+      1    0.0%    0.0%  Function: ~write_ _http_outgoing.js:623:16
+      1    0.0%    0.0%  Function: ~writeHead _http_server.js:185:19
+      1    0.0%    0.0%  Function: ~updateOutgoingData _http_server.js:368:28
+      1    0.0%    0.0%  Function: ~typeis C:\Users\ben\Documents\GitHub\busyapi\node_modules\type-is\index.js:43:17
+      1    0.0%    0.0%  Function: ~setCharset C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\utils.js:262:41
+      1    0.0%    0.0%  Function: ~set native collection.js:149:4
+      1    0.0%    0.0%  Function: ~send C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\response.js:100:25
+      1    0.0%    0.0%  Function: ~reuse timers.js:356:15
+      1    0.0%    0.0%  Function: ~restore C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:603:17
+      1    0.0%    0.0%  Function: ~resetSocketTimeout _http_server.js:607:28
+      1    0.0%    0.0%  Function: ~resOnFinish _http_server.js:509:21
+      1    0.0%    0.0%  Function: ~res.get C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\response.js:736:19
+      1    0.0%    0.0%  Function: ~remoteAddress net.js:662:52
+      1    0.0%    0.0%  Function: ~read _http_incoming.js:91:47
+      1    0.0%    0.0%  Function: ~query C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\middleware\query.js:38:24
+      1    0.0%    0.0%  Function: ~push internal/process/next_tick.js:20:7
+      1    0.0%    0.0%  Function: ~process_params C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:322:47
+      1    0.0%    0.0%  Function: ~parserOnMessageComplete _http_common.js:146:33
+      1    0.0%    0.0%  Function: ~parse C:\Users\ben\Documents\GitHub\busyapi\node_modules\forwarded\index.js:45:16
+      1    0.0%    0.0%  Function: ~onParserExecuteCommon _http_server.js:462:31
+      1    0.0%    0.0%  Function: ~onFinish _http_outgoing.js:722:18
+      1    0.0%    0.0%  Function: ~onFinish C:\Users\ben\Documents\GitHub\busyapi\node_modules\on-finished\index.js:95:20
+      1    0.0%    0.0%  Function: ~nop _stream_writable.js:39:13
+      1    0.0%    0.0%  Function: ~nextTick internal/process/next_tick.js:245:20
+      1    0.0%    0.0%  Function: ~next C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:178:16
+      1    0.0%    0.0%  Function: ~maybeReadMore _stream_readable.js:524:23
+      1    0.0%    0.0%  Function: ~jsonParser C:\Users\ben\Documents\GitHub\busyapi\node_modules\body-parser\lib\types\json.js:91:30
+      1    0.0%    0.0%  Function: ~isUint8Array internal/util/types.js:28:22
+      1    0.0%    0.0%  Function: ~internalNextTick internal/process/next_tick.js:275:28
+      1    0.0%    0.0%  Function: ~initTriggerId async_hooks.js:346:23
+      1    0.0%    0.0%  Function: ~inherits util.js:962:18
+      1    0.0%    0.0%  Function: ~hrtime internal/process.js:77:35
+      1    0.0%    0.0%  Function: ~hasbody C:\Users\ben\Documents\GitHub\busyapi\node_modules\type-is\index.js:92:18
+      1    0.0%    0.0%  Function: ~getip C:\Users\ben\Documents\GitHub\busyapi\node_modules\morgan\index.js:457:15
+      1    0.0%    0.0%  Function: ~getResponseTimeToken C:\Users\ben\Documents\GitHub\busyapi\node_modules\morgan\index.js:228:60
+      1    0.0%    0.0%  Function: ~getResponseTime C:\Users\ben\Documents\GitHub\busyapi\node_modules\morgan\index.js:330:45
+      1    0.0%    0.0%  Function: ~exports.enroll timers.js:396:26
+      1    0.0%    0.0%  Function: ~exports._unrefActive timers.js:148:32
+      1    0.0%    0.0%  Function: ~etag C:\Users\ben\Documents\GitHub\busyapi\node_modules\etag\index.js:71:14
+      1    0.0%    0.0%  Function: ~emitReadable _stream_readable.js:498:22
+      1    0.0%    0.0%  Function: ~createListener C:\Users\ben\Documents\GitHub\busyapi\node_modules\on-finished\index.js:160:24
+      1    0.0%    0.0%  Function: ~cookieParser C:\Users\ben\Documents\GitHub\busyapi\node_modules\cookie-parser\index.js:40:31
+      1    0.0%    0.0%  Function: ~clearBuffer _stream_writable.js:469:21
+      1    0.0%    0.0%  Function: ~chunkInvalid _stream_readable.js:279:22
+      1    0.0%    0.0%  Function: ~checkType C:\Users\ben\Documents\GitHub\busyapi\node_modules\body-parser\lib\types\json.js:172:29
+      1    0.0%    0.0%  Function: ~checkInvalidHeaderChar _http_common.js:331:32
+      1    0.0%    0.0%  Function: ~callback C:\Users\ben\Documents\GitHub\busyapi\node_modules\ee-first\index.js:53:20
+      1    0.0%    0.0%  Function: ~arrayClone events.js:509:20
+      1    0.0%    0.0%  Function: ~allocate buffer.js:281:18
+      1    0.0%    0.0%  Function: ~afterWrite net.js:855:20
+      1    0.0%    0.0%  Function: ~adjustOffset buffer.js:950:22
+      1    0.0%    0.0%  Function: ~_send _http_outgoing.js:216:49
+      1    0.0%    0.0%  Function: ~_flushOutput _http_outgoing.js:834:63
+      1    0.0%    0.0%  Function: ~_finish _http_outgoing.js:791:53
+      1    0.0%    0.0%  Function: ~Writable.cork _stream_writable.js:296:35
+      1    0.0%    0.0%  Function: ~Socket.setTimeout net.js:378:39
+      1    0.0%    0.0%  Function: ~Socket._writeGeneric net.js:708:42
+      1    0.0%    0.0%  Function: ~ReadableState _stream_readable.js:58:23
+      1    0.0%    0.0%  Function: ~ContentType C:\Users\ben\Documents\GitHub\busyapi\node_modules\content-type\index.js:219:22
+      1    0.0%    0.0%  Function: ~Buffer.from buffer.js:175:23
+      1    0.0%    0.0%  Function: ~<anonymous> C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:612:18
+      1    0.0%    0.0%  Function: ~<anonymous> C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\request.js:448:36
+      1    0.0%    0.0%  Function: ~<anonymous> :1:10
+      1    0.0%    0.0%  Function: ~$getMaxListeners events.js:89:26
+      1    0.0%    0.0%  Builtin: Typeof
+      1    0.0%    0.0%  Builtin: StringPrototypeCharCodeAt
+      1    0.0%    0.0%  Builtin: JsonStringify
+      1    0.0%    0.0%  Builtin: InterpreterPushArgsThenCall
+      1    0.0%    0.0%  Builtin: FunctionPrototypeHasInstance
+      1    0.0%    0.0%  Builtin: CallVarargs
+      1    0.0%    0.0%  Builtin: CallForwardVarargs
+
+ [C++]:
+   ticks  total  nonlib   name
+
+ [Summary]:
+   ticks  total  nonlib   name
+   3732   19.6%   92.6%  JavaScript
+      0    0.0%    0.0%  C++
+    194    1.0%    4.8%  GC
+  15032   78.9%          Shared libraries
+    297    1.6%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+  10833   56.8%  C:\WINDOWS\SYSTEM32\ntdll.dll
+   5230   48.3%    LazyCompile: *Socket._writeGeneric net.js:708:42
+   3628   69.4%      LazyCompile: *doWrite _stream_writable.js:379:17
+   3628  100.0%        LazyCompile: *logRequest C:\Users\ben\Documents\GitHub\busyapi\node_modules\morgan\index.js:116:24
+   3628  100.0%          LazyCompile: *listener C:\Users\ben\Documents\GitHub\busyapi\node_modules\on-finished\index.js:161:20
+   3628  100.0%            LazyCompile: *onFinish C:\Users\ben\Documents\GitHub\busyapi\node_modules\on-finished\index.js:95:20
+    928   17.7%      LazyCompile: *clearBuffer _stream_writable.js:469:21
+    928  100.0%        LazyCompile: *end _http_outgoing.js:726:45
+    928  100.0%          LazyCompile: *send C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\response.js:100:25
+    905   97.5%            LazyCompile: *<anonymous> C:\Users\ben\Documents\GitHub\busyapi\routes\api\usages.js:2:37
+     12    1.3%            Function: ~json C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\response.js:223:25
+     11    1.2%            LazyCompile: *json C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\response.js:223:25
+    449    8.6%      LazyCompile: *Writable.write _stream_writable.js:264:36
+    360   80.2%        LazyCompile: *Socket.write net.js:699:34
+    360  100.0%          Function: ~logRequest C:\Users\ben\Documents\GitHub\busyapi\node_modules\morgan\index.js:116:24
+    195   54.2%            Function: ~listener C:\Users\ben\Documents\GitHub\busyapi\node_modules\on-finished\index.js:161:20
+    165   45.8%            LazyCompile: *listener C:\Users\ben\Documents\GitHub\busyapi\node_modules\on-finished\index.js:161:20
+     89   19.8%        Function: ~Socket.write net.js:699:34
+     89  100.0%          Function: ~logRequest C:\Users\ben\Documents\GitHub\busyapi\node_modules\morgan\index.js:116:24
+     46   51.7%            Function: ~listener C:\Users\ben\Documents\GitHub\busyapi\node_modules\on-finished\index.js:161:20
+     43   48.3%            LazyCompile: *listener C:\Users\ben\Documents\GitHub\busyapi\node_modules\on-finished\index.js:161:20
+    164    3.1%      Function: ~Socket._write net.js:785:35
+    164  100.0%        Function: ~doWrite _stream_writable.js:379:17
+    128   78.0%          LazyCompile: *logRequest C:\Users\ben\Documents\GitHub\busyapi\node_modules\morgan\index.js:116:24
+    128  100.0%            LazyCompile: *listener C:\Users\ben\Documents\GitHub\busyapi\node_modules\on-finished\index.js:161:20
+     36   22.0%          Function: ~writeOrBuffer _stream_writable.js:339:23
+     36  100.0%            Function: ~Writable.write _stream_writable.js:264:36
+    857    7.9%    C:\Program Files\nodejs\node.exe
+    723   84.4%      LazyCompile: *recordStartTime C:\Users\ben\Documents\GitHub\busyapi\node_modules\morgan\index.js:484:25
+    425   58.8%        LazyCompile: *logger C:\Users\ben\Documents\GitHub\busyapi\node_modules\morgan\index.js:103:25
+    425  100.0%          LazyCompile: *trim_prefix C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:284:23
+    420   98.8%            LazyCompile: *<anonymous> C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:271:64
+      5    1.2%            Function: ~<anonymous> C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:271:64
+    286   39.6%        LazyCompile: *writeHead C:\Users\ben\Documents\GitHub\busyapi\node_modules\on-headers\index.js:39:28
+    284   99.3%          LazyCompile: *_implicitHeader _http_server.js:180:68
+    284  100.0%            LazyCompile: *end _http_outgoing.js:726:45
+     77    9.0%      Function: ~splitType C:\Users\ben\Documents\GitHub\busyapi\node_modules\media-typer\index.js:245:19
+     77  100.0%        Function: ~parse C:\Users\ben\Documents\GitHub\busyapi\node_modules\media-typer\index.js:139:15
+     48   62.3%          LazyCompile: *jsonParser C:\Users\ben\Documents\GitHub\busyapi\node_modules\body-parser\lib\types\json.js:91:30
+     48  100.0%            LazyCompile: *trim_prefix C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:284:23
+     25   32.5%          LazyCompile: *urlencodedParser C:\Users\ben\Documents\GitHub\busyapi\node_modules\body-parser\lib\types\urlencoded.js:79:36
+     25  100.0%            LazyCompile: *trim_prefix C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:284:23
+      4    5.2%          Function: ~normalizeType C:\Users\ben\Documents\GitHub\busyapi\node_modules\type-is\index.js:237:24
+      4  100.0%            Function: ~tryNormalizeType C:\Users\ben\Documents\GitHub\busyapi\node_modules\type-is\index.js:256:27
+     19    2.2%      LazyCompile: *<anonymous> :1:10
+     19  100.0%        LazyCompile: *logRequest C:\Users\ben\Documents\GitHub\busyapi\node_modules\morgan\index.js:116:24
+     19  100.0%          LazyCompile: *listener C:\Users\ben\Documents\GitHub\busyapi\node_modules\on-finished\index.js:161:20
+     19  100.0%            LazyCompile: *onFinish C:\Users\ben\Documents\GitHub\busyapi\node_modules\on-finished\index.js:95:20
+     16    1.9%      Function: ~recordStartTime C:\Users\ben\Documents\GitHub\busyapi\node_modules\morgan\index.js:484:25
+      9   56.3%        Function: ~logger C:\Users\ben\Documents\GitHub\busyapi\node_modules\morgan\index.js:103:25
+      7   77.8%          LazyCompile: *trim_prefix C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:284:23
+      6   85.7%            LazyCompile: *<anonymous> C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:271:64
+      1   14.3%            Function: ~<anonymous> C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:271:64
+      2   22.2%          Function: ~handle C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\layer.js:86:49
+      2  100.0%            Function: ~trim_prefix C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:284:23
+      7   43.8%        Function: ~writeHead C:\Users\ben\Documents\GitHub\busyapi\node_modules\on-headers\index.js:39:28
+      7  100.0%          Function: ~_implicitHeader _http_server.js:180:68
+      7  100.0%            Function: ~write_ _http_outgoing.js:623:16
+
+   4014   21.1%  C:\Program Files\nodejs\node.exe
+   2198   54.8%    C:\Program Files\nodejs\node.exe
+    505   23.0%      Function: ~splitType C:\Users\ben\Documents\GitHub\busyapi\node_modules\media-typer\index.js:245:19
+    494   97.8%        Function: ~parse C:\Users\ben\Documents\GitHub\busyapi\node_modules\media-typer\index.js:139:15
+    316   64.0%          LazyCompile: *jsonParser C:\Users\ben\Documents\GitHub\busyapi\node_modules\body-parser\lib\types\json.js:91:30
+    316  100.0%            LazyCompile: *trim_prefix C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:284:23
+    164   33.2%          LazyCompile: *urlencodedParser C:\Users\ben\Documents\GitHub\busyapi\node_modules\body-parser\lib\types\urlencoded.js:79:36
+    164  100.0%            LazyCompile: *trim_prefix C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:284:23
+     14    2.8%          Function: ~normalizeType C:\Users\ben\Documents\GitHub\busyapi\node_modules\type-is\index.js:237:24
+     14  100.0%            Function: ~tryNormalizeType C:\Users\ben\Documents\GitHub\busyapi\node_modules\type-is\index.js:256:27
+     11    2.2%        LazyCompile: *logRequest C:\Users\ben\Documents\GitHub\busyapi\node_modules\morgan\index.js:116:24
+     11  100.0%          Function: ~jsonParser C:\Users\ben\Documents\GitHub\busyapi\node_modules\body-parser\lib\types\json.js:91:30
+     11  100.0%            LazyCompile: *trim_prefix C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:284:23
+    232   10.6%      LazyCompile: *recordStartTime C:\Users\ben\Documents\GitHub\busyapi\node_modules\morgan\index.js:484:25
+    123   53.0%        LazyCompile: *logger C:\Users\ben\Documents\GitHub\busyapi\node_modules\morgan\index.js:103:25
+    123  100.0%          LazyCompile: *trim_prefix C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:284:23
+    123  100.0%            LazyCompile: *<anonymous> C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:271:64
+    107   46.1%        LazyCompile: *writeHead C:\Users\ben\Documents\GitHub\busyapi\node_modules\on-headers\index.js:39:28
+    105   98.1%          LazyCompile: *_implicitHeader _http_server.js:180:68
+    105  100.0%            LazyCompile: *end _http_outgoing.js:726:45
+      2    1.9%          Function: ~_implicitHeader _http_server.js:180:68
+      2  100.0%            LazyCompile: *end _http_outgoing.js:726:45
+    144    6.6%      LazyCompile: *wetag C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\utils.js:52:31
+    144  100.0%        LazyCompile: *send C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\response.js:100:25
+    144  100.0%          LazyCompile: *<anonymous> C:\Users\ben\Documents\GitHub\busyapi\routes\api\usages.js:2:37
+    142   98.6%            LazyCompile: *next C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\route.js:114:16
+      2    1.4%            LazyCompile: *handle C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\layer.js:86:49
+    118    5.4%      LazyCompile: *expressInit C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\middleware\init.js:22:30
+    118  100.0%        LazyCompile: *trim_prefix C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:284:23
+    118  100.0%          LazyCompile: *<anonymous> C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:271:64
+    118  100.0%            LazyCompile: *next C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:178:16
+    101    4.6%      LazyCompile: *stringify C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\response.js:1059:19
+     97   96.0%        LazyCompile: *<anonymous> C:\Users\ben\Documents\GitHub\busyapi\routes\api\usages.js:2:37
+     88   90.7%          LazyCompile: *next C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\route.js:114:16
+     88  100.0%            LazyCompile: *dispatch C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\route.js:98:45
+      9    9.3%          LazyCompile: *handle C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\layer.js:86:49
+      9  100.0%            Function: ~next C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\route.js:114:16
+      2    2.0%        LazyCompile: *json C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\response.js:223:25
+      2  100.0%          Function: ~<anonymous> C:\Users\ben\Documents\GitHub\busyapi\routes\api\usages.js:2:37
+      2  100.0%            LazyCompile: *handle C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\layer.js:86:49
+      2    2.0%        Function: ~json C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\response.js:223:25
+      2  100.0%          Function: ~<anonymous> C:\Users\ben\Documents\GitHub\busyapi\routes\api\usages.js:2:37
+      2  100.0%            Function: ~handle C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\layer.js:86:49
+     75    3.4%      LazyCompile: *parserOnHeadersComplete _http_common.js:62:33
+     69    3.1%      LazyCompile: *Socket._writeGeneric net.js:708:42
+     40   58.0%        LazyCompile: *doWrite _stream_writable.js:379:17
+     40  100.0%          LazyCompile: *logRequest C:\Users\ben\Documents\GitHub\busyapi\node_modules\morgan\index.js:116:24
+     40  100.0%            LazyCompile: *listener C:\Users\ben\Documents\GitHub\busyapi\node_modules\on-finished\index.js:161:20
+     24   34.8%        LazyCompile: *clearBuffer _stream_writable.js:469:21
+     24  100.0%          LazyCompile: *end _http_outgoing.js:726:45
+     24  100.0%            LazyCompile: *send C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\response.js:100:25
+      4    5.8%        LazyCompile: *Writable.write _stream_writable.js:264:36
+      4  100.0%          LazyCompile: *Socket.write net.js:699:34
+      4  100.0%            Function: ~logRequest C:\Users\ben\Documents\GitHub\busyapi\node_modules\morgan\index.js:116:24
+      1    1.4%        Function: ~Socket._write net.js:785:35
+      1  100.0%          Function: ~doWrite _stream_writable.js:379:17
+      1  100.0%            LazyCompile: *logRequest C:\Users\ben\Documents\GitHub\busyapi\node_modules\morgan\index.js:116:24
+     65    3.0%      LazyCompile: *header C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\response.js:707:29
+     64   98.5%        LazyCompile: *send C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\response.js:100:25
+     62   96.9%          LazyCompile: *<anonymous> C:\Users\ben\Documents\GitHub\busyapi\routes\api\usages.js:2:37
+     56   90.3%            LazyCompile: *next C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\route.js:114:16
+      6    9.7%            LazyCompile: *handle C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\layer.js:86:49
+      1    1.6%          LazyCompile: *json C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\response.js:223:25
+      1  100.0%            Function: ~<anonymous> C:\Users\ben\Documents\GitHub\busyapi\routes\api\usages.js:2:37
+      1    1.6%          Function: ~json C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\response.js:223:25
+      1  100.0%            Function: ~<anonymous> C:\Users\ben\Documents\GitHub\busyapi\routes\api\usages.js:2:37
+      1    1.5%        Function: ~json C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\response.js:223:25
+      1  100.0%          Function: ~<anonymous> C:\Users\ben\Documents\GitHub\busyapi\routes\api\usages.js:2:37
+      1  100.0%            Function: ~handle C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\layer.js:86:49
+     60    2.7%      Function: ~createWriteReq net.js:789:24
+     60  100.0%        Function: ~Socket._writeGeneric net.js:708:42
+     58   96.7%          Function: ~Socket._write net.js:785:35
+     58  100.0%            Function: ~doWrite _stream_writable.js:379:17
+      2    3.3%          LazyCompile: *Writable.write _stream_writable.js:264:36
+      2  100.0%            Function: ~Socket.write net.js:699:34
+     57    2.6%      LazyCompile: *<anonymous> C:\Users\ben\Documents\GitHub\busyapi\routes\api\usages.js:2:37
+     56   98.2%        LazyCompile: *next C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\route.js:114:16
+     56  100.0%          LazyCompile: *dispatch C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\route.js:98:45
+     56  100.0%            LazyCompile: *handle C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\layer.js:86:49
+      1    1.8%        LazyCompile: *handle C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\layer.js:86:49
+      1  100.0%          Function: ~next C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\route.js:114:16
+      1  100.0%            LazyCompile: *dispatch C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\route.js:98:45
+     55    2.5%      LazyCompile: *send C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\response.js:100:25
+     51   92.7%        LazyCompile: *<anonymous> C:\Users\ben\Documents\GitHub\busyapi\routes\api\usages.js:2:37
+     48   94.1%          LazyCompile: *next C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\route.js:114:16
+     48  100.0%            LazyCompile: *dispatch C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\route.js:98:45
+      3    5.9%          LazyCompile: *handle C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\layer.js:86:49
+      3  100.0%            Function: ~next C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\route.js:114:16
+      2    3.6%        LazyCompile: *json C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\response.js:223:25
+      2  100.0%          Function: ~<anonymous> C:\Users\ben\Documents\GitHub\busyapi\routes\api\usages.js:2:37
+      2  100.0%            LazyCompile: *handle C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\layer.js:86:49
+      2    3.6%        Function: ~json C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\response.js:223:25
+      2  100.0%          Function: ~<anonymous> C:\Users\ben\Documents\GitHub\busyapi\routes\api\usages.js:2:37
+      1   50.0%            LazyCompile: *handle C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\layer.js:86:49
+      1   50.0%            Function: ~handle C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\layer.js:86:49
+     49    2.2%      Function: ~Buffer.write buffer.js:855:34
+     43   87.8%        LazyCompile: *Buffer buffer.js:147:16
+     43  100.0%          LazyCompile: *send C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\response.js:100:25
+     43  100.0%            LazyCompile: *<anonymous> C:\Users\ben\Documents\GitHub\busyapi\routes\api\usages.js:2:37
+      6   12.2%        LazyCompile: *fromString buffer.js:298:20
+      6  100.0%          Function: ~Buffer.from buffer.js:175:23
+      6  100.0%            Function: ~Buffer buffer.js:147:16
+     47    2.1%      Builtin: RegExpPrototypeTest
+     45   95.7%        LazyCompile: *header C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\response.js:707:29
+     45  100.0%          LazyCompile: *send C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\response.js:100:25
+     42   93.3%            LazyCompile: *<anonymous> C:\Users\ben\Documents\GitHub\busyapi\routes\api\usages.js:2:37
+      2    4.4%            LazyCompile: *json C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\response.js:223:25
+      1    2.2%            Function: ~json C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\response.js:223:25
+      2    4.3%        Function: ~header C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\response.js:707:29
+      2  100.0%          Function: ~send C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\response.js:100:25
+      2  100.0%            Function: ~json C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\response.js:223:25
+     44    2.0%      LazyCompile: *getip C:\Users\ben\Documents\GitHub\busyapi\node_modules\morgan\index.js:457:15
+     44  100.0%        LazyCompile: *logger C:\Users\ben\Documents\GitHub\busyapi\node_modules\morgan\index.js:103:25
+     44  100.0%          LazyCompile: *trim_prefix C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:284:23
+     44  100.0%            LazyCompile: *<anonymous> C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:271:64
+     41    1.9%      Builtin: ObjectKeys
+     34   82.9%        LazyCompile: *setCharset C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\utils.js:262:41
+     34  100.0%          LazyCompile: *send C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\response.js:100:25
+     34  100.0%            LazyCompile: *<anonymous> C:\Users\ben\Documents\GitHub\busyapi\routes\api\usages.js:2:37
+      5   12.2%        LazyCompile: *format C:\Users\ben\Documents\GitHub\busyapi\node_modules\content-type\index.js:65:17
+      5  100.0%          Function: ~setCharset C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\utils.js:262:41
+      5  100.0%            LazyCompile: *send C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\response.js:100:25
+      1    2.4%        Function: ~populateMaps C:\Users\ben\Documents\GitHub\busyapi\node_modules\mime-types\index.js:154:23
+      1  100.0%          Function: ~<anonymous> C:\Users\ben\Documents\GitHub\busyapi\node_modules\mime-types\index.js:1:11
+      1  100.0%            Function: ~Module._compile module.js:600:37
+      1    2.4%        Function: ~format C:\Users\ben\Documents\GitHub\busyapi\node_modules\content-type\index.js:65:17
+      1  100.0%          Function: ~setCharset C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\utils.js:262:41
+      1  100.0%            LazyCompile: *send C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\response.js:100:25
+     41    1.9%      Builtin: NumberParseInt
+     40   97.6%        LazyCompile: *Readable.read _stream_readable.js:365:35
+     37   92.5%          LazyCompile: *resume_ _stream_readable.js:819:17
+     37  100.0%            LazyCompile: *_tickCallback internal/process/next_tick.js:151:25
+      3    7.5%          LazyCompile: *emitReadable _stream_readable.js:498:22
+      3  100.0%            Function: ~onEofChunk _stream_readable.js:480:20
+      1    2.4%        Function: ~Readable.read _stream_readable.js:365:35
+      1  100.0%          Function: ~flow _stream_readable.js:843:14
+      1  100.0%            Function: ~resume_ _stream_readable.js:819:17
+     33    1.5%      LazyCompile: *<anonymous> :1:10
+     31   93.9%        LazyCompile: *logRequest C:\Users\ben\Documents\GitHub\busyapi\node_modules\morgan\index.js:116:24
+     31  100.0%          LazyCompile: *listener C:\Users\ben\Documents\GitHub\busyapi\node_modules\on-finished\index.js:161:20
+     31  100.0%            LazyCompile: *onFinish C:\Users\ben\Documents\GitHub\busyapi\node_modules\on-finished\index.js:95:20
+      2    6.1%        Function: ~developmentFormatLine C:\Users\ben\Documents\GitHub\busyapi\node_modules\morgan\index.js:183:52
+      2  100.0%          Function: ~logRequest C:\Users\ben\Documents\GitHub\busyapi\node_modules\morgan\index.js:116:24
+      2  100.0%            LazyCompile: *listener C:\Users\ben\Documents\GitHub\busyapi\node_modules\on-finished\index.js:161:20
+     33    1.5%      Function: ~readPackage module.js:107:21
+     33  100.0%        Function: ~tryPackage module.js:129:20
+     33  100.0%          Function: ~Module._findPath module.js:176:28
+     33  100.0%            Function: ~Module._resolveFilename module.js:508:35
+     32    1.5%      LazyCompile: *parserOnIncoming _http_server.js:545:26
+     32  100.0%        LazyCompile: *parserOnHeadersComplete _http_common.js:62:33
+     29    1.3%      Function: ~byteLength buffer.js:475:20
+     24   82.8%        LazyCompile: *Buffer buffer.js:147:16
+     24  100.0%          LazyCompile: *send C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\response.js:100:25
+     24  100.0%            LazyCompile: *<anonymous> C:\Users\ben\Documents\GitHub\busyapi\routes\api\usages.js:2:37
+      4   13.8%        LazyCompile: *fromString buffer.js:298:20
+      4  100.0%          Function: ~Buffer.from buffer.js:175:23
+      4  100.0%            Function: ~Buffer buffer.js:147:16
+      1    3.4%        Function: ~fromString buffer.js:298:20
+      1  100.0%          Function: ~Buffer.from buffer.js:175:23
+      1  100.0%            Function: ~Buffer buffer.js:147:16
+     26    1.2%      LazyCompile: *_addListener events.js:233:22
+     26  100.0%        LazyCompile: *logger C:\Users\ben\Documents\GitHub\busyapi\node_modules\morgan\index.js:103:25
+     26  100.0%          LazyCompile: *trim_prefix C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:284:23
+     26  100.0%            LazyCompile: *<anonymous> C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:271:64
+     23    1.0%      LazyCompile: *_handles_method C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\route.js:58:59
+     23  100.0%        LazyCompile: *next C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:178:16
+     23  100.0%          LazyCompile: *<anonymous> C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:612:18
+     23  100.0%            LazyCompile: *next C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:178:16
+     22    1.0%      LazyCompile: *setCharset C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\utils.js:262:41
+     22  100.0%        LazyCompile: *send C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\response.js:100:25
+     22  100.0%          LazyCompile: *<anonymous> C:\Users\ben\Documents\GitHub\busyapi\routes\api\usages.js:2:37
+     21   95.5%            LazyCompile: *next C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\route.js:114:16
+      1    4.5%            LazyCompile: *handle C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\layer.js:86:49
+    459   11.4%    LazyCompile: *Socket._writeGeneric net.js:708:42
+    315   68.6%      LazyCompile: *clearBuffer _stream_writable.js:469:21
+    315  100.0%        LazyCompile: *end _http_outgoing.js:726:45
+    315  100.0%          LazyCompile: *send C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\response.js:100:25
+    307   97.5%            LazyCompile: *<anonymous> C:\Users\ben\Documents\GitHub\busyapi\routes\api\usages.js:2:37
+      5    1.6%            LazyCompile: *json C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\response.js:223:25
+    121   26.4%      LazyCompile: *doWrite _stream_writable.js:379:17
+    121  100.0%        LazyCompile: *logRequest C:\Users\ben\Documents\GitHub\busyapi\node_modules\morgan\index.js:116:24
+    121  100.0%          LazyCompile: *listener C:\Users\ben\Documents\GitHub\busyapi\node_modules\on-finished\index.js:161:20
+    121  100.0%            LazyCompile: *onFinish C:\Users\ben\Documents\GitHub\busyapi\node_modules\on-finished\index.js:95:20
+     10    2.2%      LazyCompile: *Writable.write _stream_writable.js:264:36
+      7   70.0%        LazyCompile: *Socket.write net.js:699:34
+      7  100.0%          Function: ~logRequest C:\Users\ben\Documents\GitHub\busyapi\node_modules\morgan\index.js:116:24
+      4   57.1%            LazyCompile: *listener C:\Users\ben\Documents\GitHub\busyapi\node_modules\on-finished\index.js:161:20
+      3   42.9%            Function: ~listener C:\Users\ben\Documents\GitHub\busyapi\node_modules\on-finished\index.js:161:20
+      3   30.0%        Function: ~Socket.write net.js:699:34
+      3  100.0%          Function: ~logRequest C:\Users\ben\Documents\GitHub\busyapi\node_modules\morgan\index.js:116:24
+      2   66.7%            Function: ~listener C:\Users\ben\Documents\GitHub\busyapi\node_modules\on-finished\index.js:161:20
+      1   33.3%            LazyCompile: *listener C:\Users\ben\Documents\GitHub\busyapi\node_modules\on-finished\index.js:161:20
+      6    1.3%      Function: ~Socket._writev net.js:780:36
+      6  100.0%        Function: ~doWrite _stream_writable.js:379:17
+      6  100.0%          Function: ~clearBuffer _stream_writable.js:469:21
+      5   83.3%            Function: ~Writable.uncork _stream_writable.js:302:37
+      1   16.7%            LazyCompile: *end _http_outgoing.js:726:45
+      6    1.3%      Function: ~Socket._write net.js:785:35
+      6  100.0%        Function: ~doWrite _stream_writable.js:379:17
+      5   83.3%          LazyCompile: *logRequest C:\Users\ben\Documents\GitHub\busyapi\node_modules\morgan\index.js:116:24
+      5  100.0%            LazyCompile: *listener C:\Users\ben\Documents\GitHub\busyapi\node_modules\on-finished\index.js:161:20
+      1   16.7%          Function: ~writeOrBuffer _stream_writable.js:339:23
+      1  100.0%            Function: ~Writable.write _stream_writable.js:264:36
+     75    1.9%    LazyCompile: *wetag C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\utils.js:52:31
+     75  100.0%      LazyCompile: *send C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\response.js:100:25
+     75  100.0%        LazyCompile: *<anonymous> C:\Users\ben\Documents\GitHub\busyapi\routes\api\usages.js:2:37
+     75  100.0%          LazyCompile: *next C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\route.js:114:16
+     75  100.0%            LazyCompile: *dispatch C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\route.js:98:45
+
+    297    1.6%  UNKNOWN
+
+    237    1.2%  LoadIC: A load IC from the snapshot
+     27   11.4%    LazyCompile: *onwrite _stream_writable.js:422:17
+     27  100.0%      LazyCompile: *Socket._writeGeneric net.js:708:42
+     14   51.9%        LazyCompile: *clearBuffer _stream_writable.js:469:21
+     14  100.0%          LazyCompile: *end _http_outgoing.js:726:45
+     14  100.0%            LazyCompile: *send C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\response.js:100:25
+     10   37.0%        LazyCompile: *doWrite _stream_writable.js:379:17
+     10  100.0%          LazyCompile: *logRequest C:\Users\ben\Documents\GitHub\busyapi\node_modules\morgan\index.js:116:24
+     10  100.0%            LazyCompile: *listener C:\Users\ben\Documents\GitHub\busyapi\node_modules\on-finished\index.js:161:20
+      2    7.4%        LazyCompile: *Writable.write _stream_writable.js:264:36
+      2  100.0%          LazyCompile: *Socket.write net.js:699:34
+      2  100.0%            Function: ~logRequest C:\Users\ben\Documents\GitHub\busyapi\node_modules\morgan\index.js:116:24
+      1    3.7%        Function: ~Socket._write net.js:785:35
+      1  100.0%          Function: ~doWrite _stream_writable.js:379:17
+      1  100.0%            LazyCompile: *logRequest C:\Users\ben\Documents\GitHub\busyapi\node_modules\morgan\index.js:116:24
+     24   10.1%    LazyCompile: *next C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:178:16
+      5   20.8%      LazyCompile: *handle C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:135:31
+      4   80.0%        LazyCompile: *app C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\express.js:37:21
+      4  100.0%          Function: ~emitTwo events.js:124:17
+      4  100.0%            LazyCompile: *emit events.js:156:44
+      1   20.0%        LazyCompile: *router C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:45:18
+      1  100.0%          LazyCompile: *trim_prefix C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:284:23
+      1  100.0%            LazyCompile: *<anonymous> C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:271:64
+      4   16.7%      LazyCompile: *query C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\middleware\query.js:38:24
+      4  100.0%        LazyCompile: *trim_prefix C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:284:23
+      4  100.0%          LazyCompile: *<anonymous> C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:271:64
+      4  100.0%            LazyCompile: *next C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:178:16
+      4   16.7%      LazyCompile: *jsonParser C:\Users\ben\Documents\GitHub\busyapi\node_modules\body-parser\lib\types\json.js:91:30
+      4  100.0%        LazyCompile: *trim_prefix C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:284:23
+      4  100.0%          LazyCompile: *<anonymous> C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:271:64
+      4  100.0%            LazyCompile: *next C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:178:16
+      3   12.5%      LazyCompile: *urlencodedParser C:\Users\ben\Documents\GitHub\busyapi\node_modules\body-parser\lib\types\urlencoded.js:79:36
+      3  100.0%        LazyCompile: *trim_prefix C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:284:23
+      3  100.0%          LazyCompile: *<anonymous> C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:271:64
+      3  100.0%            LazyCompile: *next C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:178:16
+      3   12.5%      LazyCompile: *logger C:\Users\ben\Documents\GitHub\busyapi\node_modules\morgan\index.js:103:25
+      3  100.0%        LazyCompile: *trim_prefix C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:284:23
+      3  100.0%          LazyCompile: *<anonymous> C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:271:64
+      3  100.0%            LazyCompile: *next C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:178:16
+      3   12.5%      LazyCompile: *cookieParser C:\Users\ben\Documents\GitHub\busyapi\node_modules\cookie-parser\index.js:40:31
+      3  100.0%        LazyCompile: *trim_prefix C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:284:23
+      3  100.0%          LazyCompile: *<anonymous> C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:271:64
+      3  100.0%            LazyCompile: *next C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:178:16
+      1    4.2%      LazyCompile: *expressInit C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\middleware\init.js:22:30
+      1  100.0%        LazyCompile: *trim_prefix C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:284:23
+      1  100.0%          LazyCompile: *<anonymous> C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:271:64
+      1  100.0%            LazyCompile: *next C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:178:16
+      1    4.2%      Function: ~query C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\middleware\query.js:38:24
+      1  100.0%        LazyCompile: *trim_prefix C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:284:23
+      1  100.0%          LazyCompile: *<anonymous> C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:271:64
+      1  100.0%            LazyCompile: *next C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:178:16
+     19    8.0%    LazyCompile: *trim_prefix C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:284:23
+     18   94.7%      LazyCompile: *<anonymous> C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:271:64
+     18  100.0%        LazyCompile: *next C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:178:16
+      7   38.9%          LazyCompile: *handle C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:135:31
+      7  100.0%            LazyCompile: *app C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\express.js:37:21
+      5   27.8%          Function: ~serveStatic C:\Users\ben\Documents\GitHub\busyapi\node_modules\serve-static\index.js:72:31
+      5  100.0%            LazyCompile: *trim_prefix C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:284:23
+      2   11.1%          LazyCompile: *query C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\middleware\query.js:38:24
+      2  100.0%            LazyCompile: *trim_prefix C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:284:23
+      2   11.1%          LazyCompile: *cookieParser C:\Users\ben\Documents\GitHub\busyapi\node_modules\cookie-parser\index.js:40:31
+      2  100.0%            LazyCompile: *trim_prefix C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:284:23
+      1    5.6%          LazyCompile: *jsonParser C:\Users\ben\Documents\GitHub\busyapi\node_modules\body-parser\lib\types\json.js:91:30
+      1  100.0%            LazyCompile: *trim_prefix C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:284:23
+      1    5.6%          LazyCompile: *expressInit C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\middleware\init.js:22:30
+      1  100.0%            LazyCompile: *trim_prefix C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:284:23
+      1    5.3%      Function: ~<anonymous> C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:271:64
+      1  100.0%        LazyCompile: *next C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:178:16
+      1  100.0%          LazyCompile: *query C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\middleware\query.js:38:24
+      1  100.0%            LazyCompile: *trim_prefix C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:284:23
+     19    8.0%    LazyCompile: *socketOnWrap _http_server.js:650:22
+     19  100.0%      LazyCompile: *parserOnIncoming _http_server.js:545:26
+     19  100.0%        LazyCompile: *parserOnHeadersComplete _http_common.js:62:33
+     19    8.0%    LazyCompile: *emit events.js:156:44
+      7   36.8%      LazyCompile: *resume_ _stream_readable.js:819:17
+      7  100.0%        LazyCompile: *_tickCallback internal/process/next_tick.js:151:25
+      6   31.6%      LazyCompile: *end _http_outgoing.js:726:45
+      6  100.0%        LazyCompile: *send C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\response.js:100:25
+      6  100.0%          LazyCompile: *<anonymous> C:\Users\ben\Documents\GitHub\busyapi\routes\api\usages.js:2:37
+      6  100.0%            LazyCompile: *next C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\route.js:114:16
+      3   15.8%      LazyCompile: *endReadableNT _stream_readable.js:1050:23
+      3  100.0%        LazyCompile: *_tickCallback internal/process/next_tick.js:151:25
+      2   10.5%      LazyCompile: *parserOnIncoming _http_server.js:545:26
+      2  100.0%        LazyCompile: *parserOnHeadersComplete _http_common.js:62:33
+      1    5.3%      LazyCompile: *onFinish _http_outgoing.js:722:18
+      1  100.0%        LazyCompile: *_tickCallback internal/process/next_tick.js:151:25
+     17    7.2%    LazyCompile: *recordStartTime C:\Users\ben\Documents\GitHub\busyapi\node_modules\morgan\index.js:484:25
+      9   52.9%      LazyCompile: *writeHead C:\Users\ben\Documents\GitHub\busyapi\node_modules\on-headers\index.js:39:28
+      9  100.0%        LazyCompile: *_implicitHeader _http_server.js:180:68
+      9  100.0%          LazyCompile: *end _http_outgoing.js:726:45
+      9  100.0%            LazyCompile: *send C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\response.js:100:25
+      8   47.1%      LazyCompile: *logger C:\Users\ben\Documents\GitHub\busyapi\node_modules\morgan\index.js:103:25
+      8  100.0%        LazyCompile: *trim_prefix C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:284:23
+      8  100.0%          LazyCompile: *<anonymous> C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:271:64
+      8  100.0%            LazyCompile: *next C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:178:16
+     13    5.5%    LazyCompile: *afterWrite net.js:855:20
+     13    5.5%    LazyCompile: *<anonymous> :1:10
+     10   76.9%      LazyCompile: *logRequest C:\Users\ben\Documents\GitHub\busyapi\node_modules\morgan\index.js:116:24
+     10  100.0%        LazyCompile: *listener C:\Users\ben\Documents\GitHub\busyapi\node_modules\on-finished\index.js:161:20
+     10  100.0%          LazyCompile: *onFinish C:\Users\ben\Documents\GitHub\busyapi\node_modules\on-finished\index.js:95:20
+     10  100.0%            LazyCompile: *callback C:\Users\ben\Documents\GitHub\busyapi\node_modules\ee-first\index.js:53:20
+      3   23.1%      Function: ~developmentFormatLine C:\Users\ben\Documents\GitHub\busyapi\node_modules\morgan\index.js:183:52
+      3  100.0%        Function: ~logRequest C:\Users\ben\Documents\GitHub\busyapi\node_modules\morgan\index.js:116:24
+      2   66.7%          Function: ~listener C:\Users\ben\Documents\GitHub\busyapi\node_modules\on-finished\index.js:161:20
+      2  100.0%            Function: ~onFinish C:\Users\ben\Documents\GitHub\busyapi\node_modules\on-finished\index.js:95:20
+      1   33.3%          LazyCompile: *listener C:\Users\ben\Documents\GitHub\busyapi\node_modules\on-finished\index.js:161:20
+      1  100.0%            LazyCompile: *onFinish C:\Users\ben\Documents\GitHub\busyapi\node_modules\on-finished\index.js:95:20
+     10    4.2%    LazyCompile: *handle C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\layer.js:86:49
+     10  100.0%      LazyCompile: *<anonymous> C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:271:64
+     10  100.0%        LazyCompile: *next C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:178:16
+     10  100.0%          LazyCompile: *<anonymous> C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:612:18
+     10  100.0%            LazyCompile: *next C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:178:16
+      7    3.0%    LazyCompile: *internalNextTick internal/process/next_tick.js:275:28
+      7  100.0%      LazyCompile: *end _http_outgoing.js:726:45
+      7  100.0%        LazyCompile: *send C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\response.js:100:25
+      7  100.0%          LazyCompile: *<anonymous> C:\Users\ben\Documents\GitHub\busyapi\routes\api\usages.js:2:37
+      7  100.0%            LazyCompile: *next C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\route.js:114:16
+      7    3.0%    LazyCompile: *cleanup C:\Users\ben\Documents\GitHub\busyapi\node_modules\ee-first\index.js:58:19
+      6   85.7%      LazyCompile: *callback C:\Users\ben\Documents\GitHub\busyapi\node_modules\ee-first\index.js:53:20
+      6  100.0%        LazyCompile: *onevent C:\Users\ben\Documents\GitHub\busyapi\node_modules\ee-first\index.js:81:26
+      6  100.0%          LazyCompile: *emitNone events.js:104:18
+      6  100.0%            LazyCompile: *emit events.js:156:44
+      1   14.3%      LazyCompile: *onFinish C:\Users\ben\Documents\GitHub\busyapi\node_modules\on-finished\index.js:95:20
+      1  100.0%        LazyCompile: *callback C:\Users\ben\Documents\GitHub\busyapi\node_modules\ee-first\index.js:53:20
+      1  100.0%          LazyCompile: *onevent C:\Users\ben\Documents\GitHub\busyapi\node_modules\ee-first\index.js:81:26
+      1  100.0%            LazyCompile: *emitNone events.js:104:18
+      7    3.0%    LazyCompile: *_addListener events.js:233:22
+      7  100.0%      LazyCompile: *logger C:\Users\ben\Documents\GitHub\busyapi\node_modules\morgan\index.js:103:25
+      7  100.0%        LazyCompile: *trim_prefix C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:284:23
+      7  100.0%          LazyCompile: *<anonymous> C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:271:64
+      7  100.0%            LazyCompile: *next C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:178:16
+      7    3.0%    LazyCompile: *Readable.on _stream_readable.js:771:33
+      7  100.0%      LazyCompile: *onSocket C:\Users\ben\Documents\GitHub\busyapi\node_modules\on-finished\index.js:106:20
+      7  100.0%        LazyCompile: *logger C:\Users\ben\Documents\GitHub\busyapi\node_modules\morgan\index.js:103:25
+      7  100.0%          LazyCompile: *trim_prefix C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:284:23
+      7  100.0%            LazyCompile: *<anonymous> C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:271:64
+      5    2.1%    LazyCompile: *resOnFinish _http_server.js:509:21
+      3   60.0%      LazyCompile: *resOnFinish _http_server.js:509:21
+      3  100.0%        LazyCompile: *emitNone events.js:104:18
+      3  100.0%          LazyCompile: *emit events.js:156:44
+      3  100.0%            LazyCompile: *onFinish _http_outgoing.js:722:18
+      2   40.0%      LazyCompile: *emitNone events.js:104:18
+      2  100.0%        LazyCompile: *emit events.js:156:44
+      2  100.0%          LazyCompile: *onFinish _http_outgoing.js:722:18
+      2  100.0%            LazyCompile: *_tickCallback internal/process/next_tick.js:151:25
+      5    2.1%    LazyCompile: *parserOnHeadersComplete _http_common.js:62:33
+      4    1.7%    LazyCompile: *resume _stream_readable.js:812:16
+      4  100.0%      LazyCompile: *resOnFinish _http_server.js:509:21
+      4  100.0%        LazyCompile: *emitNone events.js:104:18
+      4  100.0%          LazyCompile: *emit events.js:156:44
+      4  100.0%            LazyCompile: *onFinish _http_outgoing.js:722:18
+      4    1.7%    LazyCompile: *parserOnIncoming _http_server.js:545:26
+      4  100.0%      LazyCompile: *parserOnHeadersComplete _http_common.js:62:33
+      4    1.7%    LazyCompile: *ServerResponse _http_server.js:109:24
+      4  100.0%      LazyCompile: *parserOnIncoming _http_server.js:545:26
+      4  100.0%        LazyCompile: *parserOnHeadersComplete _http_common.js:62:33
+      3    1.3%    LazyCompile: *Readable.read _stream_readable.js:365:35
+      3  100.0%      LazyCompile: *emitReadable _stream_readable.js:498:22
+      3  100.0%        Function: ~onEofChunk _stream_readable.js:480:20
+      3  100.0%          LazyCompile: *parserOnMessageComplete _http_common.js:146:33
+      3    1.3%    LazyCompile: *<anonymous> C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:271:64
+      3  100.0%      LazyCompile: *next C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:178:16
+      1   33.3%        LazyCompile: *jsonParser C:\Users\ben\Documents\GitHub\busyapi\node_modules\body-parser\lib\types\json.js:91:30
+      1  100.0%          LazyCompile: *trim_prefix C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:284:23
+      1  100.0%            LazyCompile: *<anonymous> C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:271:64
+      1   33.3%        LazyCompile: *handle C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:135:31
+      1  100.0%          LazyCompile: *app C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\express.js:37:21
+      1  100.0%            Function: ~emitTwo events.js:124:17
+      1   33.3%        LazyCompile: *cookieParser C:\Users\ben\Documents\GitHub\busyapi\node_modules\cookie-parser\index.js:40:31
+      1  100.0%          LazyCompile: *trim_prefix C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:284:23
+      1  100.0%            LazyCompile: *<anonymous> C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:271:64
+
+    196    1.0%  Builtin: KeyedLoadIC_Megamorphic
+     22   11.2%    LazyCompile: *matchKnownFields _http_incoming.js:150:26
+     22  100.0%      LazyCompile: *parserOnHeadersComplete _http_common.js:62:33
+     21   10.7%    LazyCompile: *handle C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:135:31
+     18   85.7%      LazyCompile: *router C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:45:18
+     18  100.0%        LazyCompile: *trim_prefix C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:284:23
+     18  100.0%          LazyCompile: *<anonymous> C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:271:64
+     18  100.0%            LazyCompile: *next C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:178:16
+      3   14.3%      LazyCompile: *app C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\express.js:37:21
+      3  100.0%        Function: ~emitTwo events.js:124:17
+      3  100.0%          LazyCompile: *emit events.js:156:44
+      3  100.0%            LazyCompile: *parserOnIncoming _http_server.js:545:26
+     21   10.7%    LazyCompile: *emit events.js:156:44
+      6   28.6%      LazyCompile: *resume_ _stream_readable.js:819:17
+      6  100.0%        LazyCompile: *_tickCallback internal/process/next_tick.js:151:25
+      4   19.0%      LazyCompile: *parserOnIncoming _http_server.js:545:26
+      4  100.0%        LazyCompile: *parserOnHeadersComplete _http_common.js:62:33
+      4   19.0%      LazyCompile: *end _http_outgoing.js:726:45
+      4  100.0%        LazyCompile: *send C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\response.js:100:25
+      3   75.0%          LazyCompile: *<anonymous> C:\Users\ben\Documents\GitHub\busyapi\routes\api\usages.js:2:37
+      3  100.0%            LazyCompile: *next C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\route.js:114:16
+      1   25.0%          Function: ~json C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\response.js:223:25
+      1  100.0%            Function: ~<anonymous> C:\Users\ben\Documents\GitHub\busyapi\routes\api\usages.js:2:37
+      3   14.3%      LazyCompile: *onFinish _http_outgoing.js:722:18
+      3  100.0%        LazyCompile: *_tickCallback internal/process/next_tick.js:151:25
+      1    4.8%      LazyCompile: *endReadableNT _stream_readable.js:1050:23
+      1  100.0%        LazyCompile: *_tickCallback internal/process/next_tick.js:151:25
+      1    4.8%      LazyCompile: *emitReadable _stream_readable.js:498:22
+      1  100.0%        Function: ~onEofChunk _stream_readable.js:480:20
+      1  100.0%          LazyCompile: *parserOnMessageComplete _http_common.js:146:33
+      1    4.8%      LazyCompile: *Readable.read _stream_readable.js:365:35
+      1  100.0%        LazyCompile: *resume_ _stream_readable.js:819:17
+      1  100.0%          LazyCompile: *_tickCallback internal/process/next_tick.js:151:25
+      1    4.8%      Function: ~onFinish _http_outgoing.js:722:18
+      1  100.0%        LazyCompile: *_tickCallback internal/process/next_tick.js:151:25
+     14    7.1%    LazyCompile: *<anonymous> C:\Users\ben\Documents\GitHub\busyapi\routes\api\usages.js:2:37
+     13   92.9%      LazyCompile: *next C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\route.js:114:16
+     13  100.0%        LazyCompile: *dispatch C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\route.js:98:45
+     13  100.0%          LazyCompile: *handle C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\layer.js:86:49
+     13  100.0%            LazyCompile: *<anonymous> C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:271:64
+      1    7.1%      LazyCompile: *handle C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\layer.js:86:49
+      1  100.0%        Function: ~next C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\route.js:114:16
+      1  100.0%          LazyCompile: *dispatch C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\route.js:98:45
+      1  100.0%            LazyCompile: *handle C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\layer.js:86:49
+     12    6.1%    LazyCompile: *cleanup C:\Users\ben\Documents\GitHub\busyapi\node_modules\ee-first\index.js:58:19
+      8   66.7%      LazyCompile: *onFinish C:\Users\ben\Documents\GitHub\busyapi\node_modules\on-finished\index.js:95:20
+      8  100.0%        LazyCompile: *callback C:\Users\ben\Documents\GitHub\busyapi\node_modules\ee-first\index.js:53:20
+      8  100.0%          LazyCompile: *onevent C:\Users\ben\Documents\GitHub\busyapi\node_modules\ee-first\index.js:81:26
+      8  100.0%            LazyCompile: *emitNone events.js:104:18
+      3   25.0%      LazyCompile: *callback C:\Users\ben\Documents\GitHub\busyapi\node_modules\ee-first\index.js:53:20
+      3  100.0%        LazyCompile: *onevent C:\Users\ben\Documents\GitHub\busyapi\node_modules\ee-first\index.js:81:26
+      3  100.0%          LazyCompile: *emitNone events.js:104:18
+      3  100.0%            LazyCompile: *emit events.js:156:44
+      1    8.3%      Function: ~onFinish C:\Users\ben\Documents\GitHub\busyapi\node_modules\on-finished\index.js:95:20
+      1  100.0%        Function: ~callback C:\Users\ben\Documents\GitHub\busyapi\node_modules\ee-first\index.js:53:20
+      1  100.0%          Function: ~onevent C:\Users\ben\Documents\GitHub\busyapi\node_modules\ee-first\index.js:81:26
+      1  100.0%            LazyCompile: *emitNone events.js:104:18
+     11    5.6%    LazyCompile: *Socket._writeGeneric net.js:708:42
+     11  100.0%      LazyCompile: *clearBuffer _stream_writable.js:469:21
+     11  100.0%        LazyCompile: *end _http_outgoing.js:726:45
+     11  100.0%          LazyCompile: *send C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\response.js:100:25
+      9   81.8%            LazyCompile: *<anonymous> C:\Users\ben\Documents\GitHub\busyapi\routes\api\usages.js:2:37
+      2   18.2%            LazyCompile: *json C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\response.js:223:25
+     10    5.1%    LazyCompile: *onParserExecute _http_server.js:447:25
+      9    4.6%    LazyCompile: *header C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\response.js:707:29
+      6   66.7%      LazyCompile: *send C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\response.js:100:25
+      5   83.3%        LazyCompile: *<anonymous> C:\Users\ben\Documents\GitHub\busyapi\routes\api\usages.js:2:37
+      5  100.0%          LazyCompile: *next C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\route.js:114:16
+      5  100.0%            LazyCompile: *dispatch C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\route.js:98:45
+      1   16.7%        Function: ~json C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\response.js:223:25
+      1  100.0%          Function: ~<anonymous> C:\Users\ben\Documents\GitHub\busyapi\routes\api\usages.js:2:37
+      1  100.0%            Function: ~handle C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\layer.js:86:49
+      3   33.3%      LazyCompile: *app.(anonymous function) C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\application.js:472:25
+      3  100.0%        LazyCompile: *send C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\response.js:100:25
+      3  100.0%          LazyCompile: *<anonymous> C:\Users\ben\Documents\GitHub\busyapi\routes\api\usages.js:2:37
+      3  100.0%            LazyCompile: *next C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\route.js:114:16
+      9    4.6%    LazyCompile: *app.(anonymous function) C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\application.js:472:25
+      9  100.0%      LazyCompile: *<anonymous> C:\Users\ben\Documents\GitHub\busyapi\routes\api\usages.js:2:37
+      8   88.9%        LazyCompile: *next C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\route.js:114:16
+      8  100.0%          LazyCompile: *dispatch C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\route.js:98:45
+      8  100.0%            LazyCompile: *handle C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\layer.js:86:49
+      1   11.1%        LazyCompile: *handle C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\layer.js:86:49
+      1  100.0%          Function: ~next C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\route.js:114:16
+      1  100.0%            LazyCompile: *dispatch C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\route.js:98:45
+      7    3.6%    LazyCompile: *afterWrite net.js:855:20
+      6    3.1%    LazyCompile: *expressInit C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\middleware\init.js:22:30
+      6  100.0%      LazyCompile: *trim_prefix C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:284:23
+      6  100.0%        LazyCompile: *<anonymous> C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:271:64
+      6  100.0%          LazyCompile: *next C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:178:16
+      6  100.0%            LazyCompile: *query C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\middleware\query.js:38:24
+      6    3.1%    LazyCompile: *Readable.on _stream_readable.js:771:33
+      6  100.0%      LazyCompile: *onSocket C:\Users\ben\Documents\GitHub\busyapi\node_modules\on-finished\index.js:106:20
+      6  100.0%        LazyCompile: *logger C:\Users\ben\Documents\GitHub\busyapi\node_modules\morgan\index.js:103:25
+      6  100.0%          LazyCompile: *trim_prefix C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:284:23
+      6  100.0%            LazyCompile: *<anonymous> C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:271:64
+      5    2.6%    LazyCompile: *removeListener events.js:355:28
+      5  100.0%      LazyCompile: *onSocket C:\Users\ben\Documents\GitHub\busyapi\node_modules\on-finished\index.js:106:20
+      5  100.0%        LazyCompile: *logger C:\Users\ben\Documents\GitHub\busyapi\node_modules\morgan\index.js:103:25
+      5  100.0%          LazyCompile: *trim_prefix C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:284:23
+      5  100.0%            LazyCompile: *<anonymous> C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:271:64
+      5    2.6%    LazyCompile: *parserOnIncoming _http_server.js:545:26
+      5  100.0%      LazyCompile: *parserOnHeadersComplete _http_common.js:62:33
+      5    2.6%    LazyCompile: *cookieParser C:\Users\ben\Documents\GitHub\busyapi\node_modules\cookie-parser\index.js:40:31
+      5  100.0%      LazyCompile: *trim_prefix C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:284:23
+      5  100.0%        LazyCompile: *<anonymous> C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:271:64
+      5  100.0%          LazyCompile: *next C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:178:16
+      5  100.0%            LazyCompile: *urlencodedParser C:\Users\ben\Documents\GitHub\busyapi\node_modules\body-parser\lib\types\urlencoded.js:79:36
+      4    2.0%    LazyCompile: *parserOnHeadersComplete _http_common.js:62:33
+      4    2.0%    LazyCompile: *Socket.setTimeout net.js:378:39
+      4  100.0%      LazyCompile: *onParserExecute _http_server.js:447:25
+      3    1.5%    LazyCompile: *insert timers.js:158:16
+      3  100.0%      LazyCompile: *resOnFinish _http_server.js:509:21
+      3  100.0%        LazyCompile: *emitNone events.js:104:18
+      3  100.0%          LazyCompile: *emit events.js:156:44
+      3  100.0%            LazyCompile: *onFinish _http_outgoing.js:722:18
+      3    1.5%    LazyCompile: *app C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\express.js:37:21
+      3  100.0%      Function: ~emitTwo events.js:124:17
+      3  100.0%        LazyCompile: *emit events.js:156:44
+      3  100.0%          LazyCompile: *parserOnIncoming _http_server.js:545:26
+      3  100.0%            LazyCompile: *parserOnHeadersComplete _http_common.js:62:33
+      3    1.5%    LazyCompile: *_storeHeader _http_outgoing.js:290:22
+      3  100.0%      LazyCompile: *writeHead _http_server.js:185:19
+      3  100.0%        LazyCompile: *writeHead C:\Users\ben\Documents\GitHub\busyapi\node_modules\on-headers\index.js:39:28
+      3  100.0%          LazyCompile: *_implicitHeader _http_server.js:180:68
+      3  100.0%            LazyCompile: *end _http_outgoing.js:726:45
+      2    1.0%    LazyCompile: *socketOnWrap _http_server.js:650:22
+      2  100.0%      LazyCompile: *parserOnIncoming _http_server.js:545:26
+      2  100.0%        LazyCompile: *parserOnHeadersComplete _http_common.js:62:33
+      2    1.0%    LazyCompile: *send C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\response.js:100:25
+      2  100.0%      LazyCompile: *<anonymous> C:\Users\ben\Documents\GitHub\busyapi\routes\api\usages.js:2:37
+      2  100.0%        LazyCompile: *next C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\route.js:114:16
+      2  100.0%          LazyCompile: *dispatch C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\route.js:98:45
+      2  100.0%            LazyCompile: *handle C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\layer.js:86:49
+      2    1.0%    LazyCompile: *exports.unenroll timers.js:373:45
+      2  100.0%      LazyCompile: *resOnFinish _http_server.js:509:21
+      2  100.0%        LazyCompile: *emitNone events.js:104:18
+      2  100.0%          LazyCompile: *emit events.js:156:44
+      2  100.0%            LazyCompile: *onFinish _http_outgoing.js:722:18
+      2    1.0%    LazyCompile: *_addListener events.js:233:22
+      2  100.0%      LazyCompile: *logger C:\Users\ben\Documents\GitHub\busyapi\node_modules\morgan\index.js:103:25
+      2  100.0%        LazyCompile: *trim_prefix C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:284:23
+      2  100.0%          LazyCompile: *<anonymous> C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:271:64
+      2  100.0%            LazyCompile: *next C:\Users\ben\Documents\GitHub\busyapi\node_modules\express\lib\router\index.js:178:16
+      2    1.0%    LazyCompile: *<anonymous> :1:10
+      2  100.0%      LazyCompile: *logRequest C:\Users\ben\Documents\GitHub\busyapi\node_modules\morgan\index.js:116:24
+      2  100.0%        LazyCompile: *listener C:\Users\ben\Documents\GitHub\busyapi\node_modules\on-finished\index.js:161:20
+      2  100.0%          LazyCompile: *onFinish C:\Users\ben\Documents\GitHub\busyapi\node_modules\on-finished\index.js:95:20
+      2  100.0%            LazyCompile: *callback C:\Users\ben\Documents\GitHub\busyapi\node_modules\ee-first\index.js:53:20
+      2    1.0%    Function: ~getHeader _http_outgoing.js:526:57
+      2  100.0%      Function: ~getResponseTime C:\Users\ben\Documents\GitHub\busyapi\node_modules\morgan\index.js:330:45
+      2  100.0%        Function: ~<anonymous> :1:10
+      2  100.0%          Function: ~developmentFormatLine C:\Users\ben\Documents\GitHub\busyapi\node_modules\morgan\index.js:183:52
+      2  100.0%            Function: ~logRequest C:\Users\ben\Documents\GitHub\busyapi\node_modules\morgan\index.js:116:24
+
