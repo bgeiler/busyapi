@@ -7,27 +7,44 @@
 var app = require('../app');
 var debug = require('debug')('busyapi:server');
 var http = require('http');
+var cluster = require('cluster');
 
-/**
- * Get port from environment and store in Express.
- */
+const numProcs = 6;  //Magic number. 6 for the server, leaving 1 for Apache Bench, 1 for memcached.
 
-var port = normalizePort(process.env.PORT || '3000');
-app.set('port', port);
+if (cluster.isMaster) {
+  console.log(`Master ${process.pid} is running`);
 
-/**
- * Create HTTP server.
- */
+  // Fork workers.
+  for (let i = 0; i < numProcs; i++) {
+    cluster.fork();
+  }
 
-var server = http.createServer(app);
+  cluster.on('exit', (worker, code, signal) => {
+    console.log(`worker ${worker.process.pid} died`);
+  });
 
-/**
- * Listen on provided port, on all network interfaces.
- */
+} else {
+  /**
+   * Get port from environment and store in Express.
+   */
 
-server.listen(port);
-server.on('error', onError);
-server.on('listening', onListening);
+  var port = normalizePort(process.env.PORT || '3000');
+  app.set('port', port);
+
+  /**
+   * Create HTTP server.
+   */
+
+  var server = http.createServer(app);
+
+  /**
+   * Listen on provided port, on all network interfaces.
+   */
+
+  server.listen(port);
+  server.on('error', onError);
+  server.on('listening', onListening);
+}
 
 /**
  * Normalize a port into a number, string, or false.
@@ -37,13 +54,13 @@ function normalizePort(val) {
   var port = parseInt(val, 10);
 
   if (isNaN(port)) {
-    // named pipe
-    return val;
+  // named pipe
+  return val;
   }
 
   if (port >= 0) {
-    // port number
-    return port;
+  // port number
+  return port;
   }
 
   return false;

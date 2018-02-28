@@ -16,3 +16,12 @@ Used built-in profiler to see where the code is spending time:
 
 Modified to remove console logging, including morgan. This tripled (!) the number of requests we can handle to about 9k/second.
 
+Uncommented logging, redirected stdout to a file. This gave us about 7.4k/second.
+
+Recommented logging for now (would like to find a standard logger that can do both what's coming out of morgan and console.log messages).
+
+Implemented clustering using the built-in cluster API. Only using 3 processes for now. I have a 4-core machine and using one for Apache Bench and 3 for the server seems reasonable. Gloriously, we get up to 20k requests/sec, so we have at least gotten to the performance goal. Unless we actually care about the data store. Or logging.
+
+The main problem now is that we now have 3 versions of the data store, one for each process. Searching around, something like Redis would be ideal if I had a good way to build it on Windows. Looks like memcached has already been ported.
+
+Implemented memcached. Using random UUIDs for IDs and setting blindly (which is admittedly not ideal, but serviceable for the purposes of this exercise). And Apache Bench gives me... ~15.4k/second. We lost it! Quick fix, double the number of processes. I've got 8 logical processors, so this assumes 6 for the server, 1 for Apache Bench, and 1 for memcached. This gets me up to 21.8k/second, so we're back to where we need to be!

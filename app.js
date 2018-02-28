@@ -4,6 +4,8 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var memcached = require('memcached');
+var cluster = require('cluster');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
@@ -13,6 +15,10 @@ var app = express();
 // simple in-memory usage store
 var usages = [];
 app.usages = usages;
+
+// shared cache version of the in-memory usage store
+var cache = new memcached('localhost:11211', {timeout:600000, idle:600000});  //Some nice long timeouts for testing
+app.cache = cache;
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
