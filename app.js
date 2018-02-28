@@ -13,8 +13,8 @@ var users = require('./routes/users');
 
 var app = express();
 
-// simple in-memory usage store
-var usages = [];
+// Counting usages of the API
+var usages = 0;
 app.usages = usages;
 
 // shared cache version of the in-memory usage store
@@ -27,8 +27,14 @@ app.set('view engine', 'jade');
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+
+// Set up logger
+logger.token("usages", function getUsages() {
+  return "Usage count: " + app.usages;
+});
 var accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'), {flags: 'a'})
-app.use(logger('dev', {stream: accessLogStream}));  //Comment out to avoid hit to performance by printing in stdout.
+app.use(logger(':usages :method :url :status :response-time ms - :res[content-length]', {stream: accessLogStream}));  //Now using this to record both messages and logging to a file stream.
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());

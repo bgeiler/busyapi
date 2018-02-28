@@ -27,3 +27,5 @@ The main problem now is that we now have 3 versions of the data store, one for e
 Implemented memcached. Using random UUIDs for IDs and setting blindly (which is admittedly not ideal, but serviceable for the purposes of this exercise). And Apache Bench gives me... ~15.4k/second. We lost it! Quick fix, double the number of processes. I've got 8 logical processors, so this assumes 6 for the server, 1 for Apache Bench, and 1 for memcached. This gets me up to 21.8k/second, so we're back to where we need to be!
 
 Brought back morgan using a file stream per the documentation. Seems to work OK and still gives acceptable performance. Currently about 17k/second.
+
+Consolidated morgan and usage stats into one log by transforming the old "usages" array into a usage counter, incrementing the counter in the POST handler, and using that in a morgan format (basically just prepending the 'dev' format with usages). Gives basically the same performance as just using morgan with a file, which makes sense since we're not really doing that much extra work.

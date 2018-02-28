@@ -13,6 +13,8 @@ module.exports = function(app){
 
     //var usageId = app.usages.length;
     //console.log('Stored usage count: ' + usageId);  //Don't display this to avoid IO hit to performance.
+    
+    app.usages++;  //Increment
 
     res.status(201).json({'id':id});
     
