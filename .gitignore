@@ -1,2 +1,5 @@
 *swp
 node_modules
+access.log
+log.txt
+isolate*

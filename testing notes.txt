@@ -25,3 +25,5 @@ Implemented clustering using the built-in cluster API. Only using 3 processes fo
 The main problem now is that we now have 3 versions of the data store, one for each process. Searching around, something like Redis would be ideal if I had a good way to build it on Windows. Looks like memcached has already been ported.
 
 Implemented memcached. Using random UUIDs for IDs and setting blindly (which is admittedly not ideal, but serviceable for the purposes of this exercise). And Apache Bench gives me... ~15.4k/second. We lost it! Quick fix, double the number of processes. I've got 8 logical processors, so this assumes 6 for the server, 1 for Apache Bench, and 1 for memcached. This gets me up to 21.8k/second, so we're back to where we need to be!
+
+Brought back morgan using a file stream per the documentation. Seems to work OK and still gives acceptable performance. Currently about 17k/second.
